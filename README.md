@@ -1,4 +1,11 @@
-# ⚽ İlk 11 Oluşturucu
+# ⚽ Football Lineup Builder / İlk 11 Oluşturucu
+<p>
+A lightweight web application for creating football lineups based on custom formations. Manage players, build your starting XI, organize substitutes, track squad values, and save/load teams using JSON files.
+</p>
+
+<p>
+Formasyona göre ilk 11 oluşturmak için geliştirilmiş hafif ve kullanımı kolay bir web uygulaması. Oyuncu yönetimi, ilk 11 ve yedek kulübesi oluşturma, kadro değeri takibi ve JSON ile veri aktarımı özelliklerini içerir.
+</p>
 
 <p align="center">
   <img src="docs/kapak.png" alt="İlk 11 Oluşturucu" width="900">
