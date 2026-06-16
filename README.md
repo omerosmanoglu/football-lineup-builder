@@ -16,7 +16,7 @@ Formasyona göre ilk 11 oluşturmak için geliştirilmiş hafif ve kullanımı k
 </p>
 
 <p align="center">
-  🌐 <a href="https://github.com/omerosmanoglu/football-lineup-builder">Önizleme / Live Preview</a>
+  🌐 <a href="https://omer.osmanoglu.net.tr/share/football-lineup-builder">Önizleme / Live Preview</a>
   <br>
   🎥 <a href="https://www.youtube.com/watch?v=VIDEO_ID">Tanıtım Videosunu İzle</a>
 </p>
