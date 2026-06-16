@@ -1,0 +1,971 @@
+{
+  "4-2-3-1": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "20%",
+      "text": "Defans"
+    },
+    {
+      "top": "75%",
+      "left": "35%",
+      "text": "Stoper"
+    },
+    {
+      "top": "75%",
+      "left": "65%",
+      "text": "Stoper"
+    },
+    {
+      "top": "70%",
+      "left": "80%",
+      "text": "Defans"
+    },
+    {
+      "top": "50%",
+      "left": "30%",
+      "text": "Ön Libero"
+    },
+    {
+      "top": "50%",
+      "left": "70%",
+      "text": "Ön Libero"
+    },
+    {
+      "top": "30%",
+      "left": "20%",
+      "text": "Sol Kanat"
+    },
+    {
+      "top": "40%",
+      "left": "50%",
+      "text": "10 Numara"
+    },
+    {
+      "top": "30%",
+      "left": "80%",
+      "text": "Sağ Kanat"
+    },
+    {
+      "top": "10%",
+      "left": "50%",
+      "text": "Forvet"
+    }
+  ],
+  "3-1-4-2": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "10%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "50%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "90%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "57.81%",
+      "text": "Ön Libero"
+    },
+    {
+      "top": "27.27%",
+      "left": "23.44%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "27.27%",
+      "left": "46.88%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "27.27%",
+      "left": "70.31%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "27.27%",
+      "left": "93.75%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "9.09%",
+      "left": "62.5%",
+      "text": "Forvet"
+    },
+    {
+      "top": "9.09%",
+      "left": "46.88%",
+      "text": "Forvet"
+    }
+  ],
+  "3-3-3-1": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "31.25%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "57.81%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "84.38%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "31.25%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "84.38%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "31.25%",
+      "text": "Hücum"
+    },
+    {
+      "top": "45.45%",
+      "left": "57.81%",
+      "text": "Hücum"
+    },
+    {
+      "top": "45.45%",
+      "left": "84.38%",
+      "text": "Hücum"
+    },
+    {
+      "top": "27.27%",
+      "left": "57.81%",
+      "text": "Forvet"
+    }
+  ],
+  "3-4-1-2": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "31.25%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "57.81%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "84.38%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "57.81%",
+      "text": "Ön Libero"
+    },
+    {
+      "top": "54.55%",
+      "left": "23.44%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "54.55%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "54.55%",
+      "left": "92.19%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "36.36%",
+      "left": "57.81%",
+      "text": "10 Numara"
+    },
+    {
+      "top": "22.73%",
+      "left": "42.19%",
+      "text": "Forvet"
+    },
+    {
+      "top": "22.73%",
+      "left": "73.44%",
+      "text": "Forvet"
+    }
+  ],
+  "3-4-2-1": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "31.25%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "57.81%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "84.38%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "23.44%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "46.88%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "70.31%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "93.75%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "42.19%",
+      "text": "Hücum"
+    },
+    {
+      "top": "45.45%",
+      "left": "73.44%",
+      "text": "Hücum"
+    },
+    {
+      "top": "27.27%",
+      "left": "57.81%",
+      "text": "Forvet"
+    }
+  ],
+  "3-4-3": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "31.25%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "57.81%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "84.38%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "18.75%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "42.19%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "73.44%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "96.88%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "42.19%",
+      "text": "Forvet"
+    },
+    {
+      "top": "45.45%",
+      "left": "73.44%",
+      "text": "Forvet"
+    },
+    {
+      "top": "27.27%",
+      "left": "57.81%",
+      "text": "Pivot Forvet"
+    }
+  ],
+  "3-4-3 DÜZ": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "31.25%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "57.81%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "84.38%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "18.75%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "42.19%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "73.44%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "96.88%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "42.19%",
+      "text": "Kanat"
+    },
+    {
+      "top": "45.45%",
+      "left": "73.44%",
+      "text": "Kanat"
+    },
+    {
+      "top": "27.27%",
+      "left": "57.81%",
+      "text": "Forvet"
+    }
+  ],
+  "3-5-2": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "31.25%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "57.81%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "84.38%",
+      "text": "Defans"
+    },
+    {
+      "top": "45.45%",
+      "left": "15.62%",
+      "text": "Sol Kanat"
+    },
+    {
+      "top": "45.45%",
+      "left": "37.5%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "78.12%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "100.0%",
+      "text": "Sağ Kanat"
+    },
+    {
+      "top": "9.09%",
+      "left": "42.19%",
+      "text": "Forvet"
+    },
+    {
+      "top": "9.09%",
+      "left": "73.44%",
+      "text": "Forvet"
+    }
+  ],
+  "3-5-2 DÜZ": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "31.25%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "57.81%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "84.38%",
+      "text": "Defans"
+    },
+    {
+      "top": "36.36%",
+      "left": "15.62%",
+      "text": "Sol Kanat"
+    },
+    {
+      "top": "45.45%",
+      "left": "37.5%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "78.12%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "36.36%",
+      "left": "100.0%",
+      "text": "Sağ Kanat"
+    },
+    {
+      "top": "9.09%",
+      "left": "42.19%",
+      "text": "Forvet"
+    },
+    {
+      "top": "9.09%",
+      "left": "73.44%",
+      "text": "Forvet"
+    }
+  ],
+  "3-5-2 OFANS TAKTİK": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "31.25%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "57.81%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "84.38%",
+      "text": "Defans"
+    },
+    {
+      "top": "36.36%",
+      "left": "15.62%",
+      "text": "Sol Kanat"
+    },
+    {
+      "top": "45.45%",
+      "left": "37.5%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "27.27%",
+      "left": "57.81%",
+      "text": "10 Numara"
+    },
+    {
+      "top": "45.45%",
+      "left": "78.12%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "36.36%",
+      "left": "100.0%",
+      "text": "Sağ Kanat"
+    },
+    {
+      "top": "9.09%",
+      "left": "42.19%",
+      "text": "Forvet"
+    },
+    {
+      "top": "9.09%",
+      "left": "73.44%",
+      "text": "Forvet"
+    }
+  ],
+  "4-1-3-2": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "15.62%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "40.62%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "75.0%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "100.0%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "57.81%",
+      "text": "Ön Libero"
+    },
+    {
+      "top": "50.0%",
+      "left": "31.25%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "50.0%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "50.0%",
+      "left": "84.38%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "31.82%",
+      "left": "46.88%",
+      "text": "Forvet"
+    },
+    {
+      "top": "31.82%",
+      "left": "68.75%",
+      "text": "Forvet"
+    }
+  ],
+  "4-1-4-1": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "23.44%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "45.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "70.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "92.19%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "57.81%",
+      "text": "Ön Libero"
+    },
+    {
+      "top": "50.0%",
+      "left": "23.44%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "50.0%",
+      "left": "45.31%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "50.0%",
+      "left": "70.31%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "50.0%",
+      "left": "92.19%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "31.82%",
+      "left": "57.81%",
+      "text": "Forvet"
+    }
+  ],
+  "4-3-1-2": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "23.44%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "45.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "70.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "92.19%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "31.25%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "84.38%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "50.0%",
+      "left": "57.81%",
+      "text": "10 Numara"
+    },
+    {
+      "top": "31.82%",
+      "left": "46.88%",
+      "text": "Forvet"
+    },
+    {
+      "top": "31.82%",
+      "left": "68.75%",
+      "text": "Forvet"
+    }
+  ],
+  "4-3-2-1": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "23.44%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "45.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "70.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "92.19%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "31.25%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "84.38%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "50.0%",
+      "left": "46.88%",
+      "text": "Hücum"
+    },
+    {
+      "top": "50.0%",
+      "left": "68.75%",
+      "text": "Hücum"
+    },
+    {
+      "top": "31.82%",
+      "left": "57.81%",
+      "text": "Forvet"
+    }
+  ],
+  "4-3-3 DEFANSİF": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "23.44%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "45.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "70.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "92.19%",
+      "text": "Defans"
+    },
+    {
+      "top": "63.64%",
+      "left": "23.44%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "63.64%",
+      "left": "92.19%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "45.45%",
+      "left": "42.19%",
+      "text": "Kanat"
+    },
+    {
+      "top": "45.45%",
+      "left": "73.44%",
+      "text": "Kanat"
+    },
+    {
+      "top": "27.27%",
+      "left": "57.81%",
+      "text": "Forvet"
+    }
+  ],
+  "4-3-3 LİBERO": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "68.18%",
+      "left": "57.81%",
+      "text": "Libero"
+    },
+    {
+      "top": "80%",
+      "left": "34.38%",
+      "text": "Sol Bek"
+    },
+    {
+      "top": "70%",
+      "left": "57.81%",
+      "text": "Stoper"
+    },
+    {
+      "top": "80%",
+      "left": "81.25%",
+      "text": "Sağ Bek"
+    },
+    {
+      "top": "54.55%",
+      "left": "39.06%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "54.55%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "54.55%",
+      "left": "76.56%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "36.36%",
+      "left": "42.19%",
+      "text": "Kanat"
+    },
+    {
+      "top": "36.36%",
+      "left": "73.44%",
+      "text": "Kanat"
+    },
+    {
+      "top": "18.18%",
+      "left": "57.81%",
+      "text": "Forvet"
+    }
+  ],
+  "4-3-3 OFANSİF": [
+    {
+      "top": "90%",
+      "left": "50%",
+      "text": "Kaleci"
+    },
+    {
+      "top": "70%",
+      "left": "23.44%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "45.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "70.31%",
+      "text": "Defans"
+    },
+    {
+      "top": "70%",
+      "left": "92.19%",
+      "text": "Defans"
+    },
+    {
+      "top": "59.09%",
+      "left": "39.06%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "59.09%",
+      "left": "57.81%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "59.09%",
+      "left": "76.56%",
+      "text": "Orta Saha"
+    },
+    {
+      "top": "40.91%",
+      "left": "31.25%",
+      "text": "Forvet"
+    },
+    {
+      "top": "40.91%",
+      "left": "57.81%",
+      "text": "Forvet"
+    },
+    {
+      "top": "40.91%",
+      "left": "84.38%",
+      "text": "Forvet"
+    }
+  ]
+}

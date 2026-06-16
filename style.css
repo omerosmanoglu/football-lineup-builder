@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#divKadro {
+  font-size:63%;
+}
+
+.squad-list {
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.player-item {
+  cursor: grab;
+  user-select: none;
+}
+
+.player-edit-icon {
+  opacity: 0;
+  color: #6c757d;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.player-item:hover .player-edit-icon {
+  opacity: 1;
+}
+
+.player-edit-icon:hover {
+  color: #0d6efd;
+}
+
+.player-item:active {
+  cursor: grabbing;
+}
+
+.pitch {
+  position: relative;
+  width: 100%;
+  min-height: 97vh;
+  border-radius: 14px;
+  border: 2px solid #1f5c2e;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 45%), repeating-linear-gradient(0deg, #5fa548, #5fa548 52px, #6ab651 52px, #6ab651 104px);
+  overflow: hidden;
+}
+
+.pitch::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.position-slot {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4px;
+  font-size: 11px;
+  line-height: 1.2;
+  cursor: grab;
+}
+
+.position-slot:active {
+  cursor: grabbing;
+}
+
+.position-slot.occupied {
+  border-style: solid;
+  background-color: rgba(6, 40, 14, 0.75);
+}
+
+.slot-label {
+  opacity: 0.9;
+}
+
+.slot-player {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.slot-remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-radius: 999px;
+  background: #dc3545;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.bench-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.bench-slot {
+  position: relative;
+  min-height: 44px;
+  border-radius: 8px;
+  border: 2px dashed #9aa5b1;
+  background: #f8f9fa;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 8px 34px 8px 10px;
+  font-size: 12px;
+}
+
+.bench-slot.occupied {
+  border-style: solid;
+  background: #e9ecef;
+  color: #212529;
+}
+
+.bench-slot .slot-remove {
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+
+.value-summary {
+  display: grid;
+  gap: 6px;
+}
+
+.nationality-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+}
+
+/*
+Ekran ayarı
+*/
+/* Desktop */
+.app-scale {
+  transition: 0.2s;
+}
+
+/* Yatay tablet */
+@media (max-width: 1200px) and (orientation: landscape) {
+  .app-scale {
+    zoom: 0.8;
+  }
+
+  #divKadro {
+    font-size: 0.75rem;
+  }
+
+  #divSaha {
+    font-size: 0.75rem;
+  }
+}
+
+/* Dikey tablet */
+@media (max-width: 992px) and (orientation: portrait) {
+  .app-scale {
+    zoom: 0.7;
+  }
+
+  #divKadro,
+  #divSaha {
+    font-size: 0.6rem;
+  }
+}
+
+/* Telefon */
+@media (max-width: 768px) {
+  .app-scale {
+    zoom: 1;
+  }
+
+  #divKadro,
+  #divSaha,
+  #divRapor {
+    width: 100%;
+  }
+
+  #divKadro,
+  #divSaha {
+    font-size: 0.8rem;
+  }
+}
