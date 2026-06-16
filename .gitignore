@@ -1,0 +1,30 @@
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# MacOS
+.DS_Store
+
+# Loglar
+*.log
+
+# Geçici dosyalar
+*.tmp
+*.bak
+
+# Node.js kullanırsan
+node_modules/
+
+# Python kullanırsan
+__pycache__/
+*.pyc
+
+# Ortam değişkenleri
+.env
+.env.*
+
+# Yayınlamak istemediğin dosyalar
+transfermarkt_scraper.py
