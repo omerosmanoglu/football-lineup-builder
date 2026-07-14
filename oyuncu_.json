@@ -1,0 +1,39 @@
+[
+  {"name":"Ederson","positions":"Kaleci","uyruk":"Brezilya / Portekiz","deger":13,"sakat":false,"kadrodisi":true}
+,{"name":"Dominik Livakovic","positions":"Kaleci","uyruk":"Hırvatistan","deger":4,"sakat":false,"kadrodisi":true}
+,{"name":"İrfan Can Eğribayat","positions":"Kaleci","uyruk":"Türkiye","deger":1.5,"sakat":false,"kadrodisi":true}
+,{"name":"Tarık Çetin","positions":"Kaleci","uyruk":"Türkiye","deger":0.6,"sakat":false,"kadrodisi":true}
+,{"name":"Mert Günok","positions":"Kaleci","uyruk":"Türkiye","deger":0.5,"sakat":false,"kadrodisi":false}
+,{"name":"Engin Can Biterge","positions":"Kaleci","uyruk":"Türkiye","deger":0,"sakat":false,"kadrodisi":false}
+,{"name":"Jayden Oosterwolde","positions":"Stoper","uyruk":"Hollanda / Surinam","deger":18,"sakat":false,"kadrodisi":false}
+,{"name":"Milan Škriniar","positions":"Stoper","uyruk":"Slovakya","deger":11,"sakat":false,"kadrodisi":false}
+,{"name":"Diego Carlos","positions":"Stoper","uyruk":"Brezilya / İspanya","deger":6,"sakat":true,"kadrodisi":false}
+,{"name":"Yiğit Efe Demir","positions":"Stoper","uyruk":"Türkiye","deger":5,"sakat":false,"kadrodisi":false}
+,{"name":"Çağlar Söyüncü","positions":"Stoper","uyruk":"Türkiye","deger":4.5,"sakat":false,"kadrodisi":true}
+,{"name":"Rodrigo Becão","positions":"Stoper","uyruk":"Brezilya","deger":2.5,"sakat":false,"kadrodisi":true}
+,{"name":"Omar Fayed","positions":"Stoper","uyruk":"Mısır","deger":1,"sakat":false,"kadrodisi":true}
+,{"name":"Yiğit Fidan","positions":"Stoper","uyruk":"Türkiye","deger":0.8,"sakat":false,"kadrodisi":false}
+,{"name":"Kamil Efe Üregen","positions":"Stoper","uyruk":"Türkiye","deger":0.1,"sakat":false,"kadrodisi":true}
+,{"name":"Archie Brown","positions":"Sol Bek","uyruk":"İngiltere / Jamaika","deger":9,"sakat":false,"kadrodisi":false}
+,{"name":"Levent Mercan","positions":"Sol Bek","uyruk":"Türkiye / Almanya","deger":5,"sakat":true,"kadrodisi":false}
+,{"name":"Mert Müldür","positions":"Sağ Bek","uyruk":"Türkiye / Avusturya","deger":7,"sakat":false,"kadrodisi":true}
+,{"name":"Nélson Semedo","positions":"Sağ Bek","uyruk":"Portekiz / Yeşil Burun Adaları","deger":7,"sakat":false,"kadrodisi":false}
+,{"name":"Ognjen Mimović","positions":"Sağ Bek","uyruk":"Sırbistan","deger":3,"sakat":false,"kadrodisi":true}
+,{"name":"İsmail Yüksek","positions":"Ön Libero","uyruk":"Türkiye","deger":15,"sakat":false,"kadrodisi":false}
+,{"name":"Sofyan Amrabat","positions":"Ön Libero","uyruk":"Fas / Hollanda","deger":12,"sakat":true,"kadrodisi":false}
+,{"name":"N'Golo Kanté","positions":"Ön Libero","uyruk":"Fransa / Mali","deger":4.5,"sakat":false,"kadrodisi":false}
+,{"name":"Bartuğ Elmaz","positions":"Ön Libero","uyruk":"Türkiye","deger":1.5,"sakat":false,"kadrodisi":false}
+,{"name":"Mattéo Guendouzi","positions":"Merkez Orta Saha","uyruk":"Fransa / Fas","deger":28,"sakat":false,"kadrodisi":false}
+,{"name":"Fred","positions":"Merkez Orta Saha","uyruk":"Brezilya","deger":6,"sakat":false,"kadrodisi":true}
+,{"name":"Abdou Aziz Fall","positions":"Merkez Orta Saha","uyruk":"Senegal","deger":0.1,"sakat":false,"kadrodisi":true}
+,{"name":"Marco Asensio","positions":"On Numara","uyruk":"İspanya / Hollanda","deger":15,"sakat":false,"kadrodisi":false}
+,{"name":"Talisca","positions":"On Numara","uyruk":"Brezilya","deger":8,"sakat":false,"kadrodisi":false}
+,{"name":"Emre Demir","positions":"On Numara","uyruk":"Türkiye","deger":0.5,"sakat":false,"kadrodisi":false}
+,{"name":"Kerem Aktürkoğlu","positions":"Sol Kanat","uyruk":"Türkiye","deger":22,"sakat":false,"kadrodisi":false}
+,{"name":"Oğuz Aydın","positions":"Sol Kanat","uyruk":"Türkiye / Hollanda","deger":8,"sakat":true,"kadrodisi":false}
+,{"name":"Dorgeles Nene","positions":"Sağ Kanat","uyruk":"Mali","deger":18,"sakat":false,"kadrodisi":false}
+,{"name":"Cengiz Ünder","positions":"Sağ Kanat","uyruk":"Türkiye","deger":6,"sakat":false,"kadrodisi":true}
+,{"name":"Anthony Musaba","positions":"Sağ Kanat","uyruk":"Hollanda / Kongo DC","deger":6,"sakat":false,"kadrodisi":false}
+,{"name":"İrfan Can Kahveci","positions":"Sağ Kanat","uyruk":"Türkiye","deger":3.5,"sakat":false,"kadrodisi":true}
+,{"name":"Sidiki Chérif","positions":"Santrafor","uyruk":"Gine","deger":18,"sakat":false,"kadrodisi":true}
+]
