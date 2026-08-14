@@ -1056,6 +1056,7 @@ new Vue({
   created: async function () {
     try {
       await Promise.all([this.loadPlayers(), this.loadFormations()]);
+      this.resetAssignments();
     } catch (error) {
       // Keep behavior simple and visible in console for local static hosting.
       console.error(error);
