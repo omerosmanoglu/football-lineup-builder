@@ -675,7 +675,7 @@ new Vue({
         return;
       }
 
-      this.draggedContext = { source: "squad", playerId: Number(playerId) };
+      this.draggedContext = { source: "squad", playerId: Number(playerId), playerData: player };
       event.dataTransfer.effectAllowed = "move";
       event.dataTransfer.setData("text/player-id", String(playerId));
     },
@@ -685,7 +685,7 @@ new Vue({
       if (!player) {
         return;
       }
-      this.draggedContext = { source: "field", index: index, playerId: Number(player._id) };
+      this.draggedContext = { source: "field", index: index, playerId: Number(player._id), playerData: player };
       event.dataTransfer.effectAllowed = "move";
       event.dataTransfer.setData("text/player-id", String(player._id));
     },
@@ -695,12 +695,34 @@ new Vue({
       if (!player) {
         return;
       }
-      this.draggedContext = { source: "bench", index: index, playerId: Number(player._id) };
+      this.draggedContext = { source: "bench", index: index, playerId: Number(player._id), playerData: player };
       event.dataTransfer.effectAllowed = "move";
       event.dataTransfer.setData("text/player-id", String(player._id));
     },
 
     clearDraggedContext: function () {
+      if (this.draggedContext && this.draggedContext.playerId) {
+        var playerId = this.draggedContext.playerId;
+        var foundInField = this.fieldAssignments.some(function (p) {
+          return p && p._id === playerId;
+        });
+        var foundInBench = this.benchAssignments.some(function (p) {
+          return p && p._id === playerId;
+        });
+        var foundInFederation = this.federationAssignments.some(function (p) {
+          return p && p._id === playerId;
+        });
+        var foundInSquad = this.players.some(function (p) {
+          return p && p._id === playerId;
+        });
+
+        if (!foundInField && !foundInBench && !foundInFederation && !foundInSquad) {
+          console.warn("Oyuncu " + playerId + " hiçbir yerde bulunamadı! Kadro'ya ekleniyor...");
+          if (this.draggedContext.playerData) {
+            this.addBackToSquad(this.draggedContext.playerData);
+          }
+        }
+      }
       this.draggedContext = null;
     },
 
@@ -1090,7 +1112,7 @@ new Vue({
         event.preventDefault();
         return;
       }
-      this.draggedContext = { source: "federation", index: index, playerId: Number(player._id) };
+      this.draggedContext = { source: "federation", index: index, playerId: Number(player._id), playerData: player };
       event.dataTransfer.effectAllowed = "move";
       event.dataTransfer.setData("text/player-id", String(player._id));
     },
