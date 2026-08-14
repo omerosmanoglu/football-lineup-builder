@@ -47,7 +47,7 @@
                   @dragend="clearDraggedContext">
                   <div class="d-flex justify-content-between align-items-start gap-2">
                     <div class="flex-grow-1 text-start">
-                      <div class="fw-semibold">{{ player.name }}{{ isYoungPlayer(player) ? ' (+4)' : '' }}</div>
+                      <div class="fw-semibold">{{ player.name }}{{ isForeignYoungPlayer(player) ? ' (+4)' : '' }}</div>
                       <div class="small text-muted">{{ player.positions }}</div>
                       <div class="small text-muted">{{ player.uyruk }} - {{ formatMoney(player.deger) }}</div>
                     </div>
@@ -86,7 +86,7 @@
                   @dragover.prevent
                   @drop.prevent="dropToField(index, $event)">
                   <template v-if="fieldAssignments[index]">
-                    <span class="slot-player" draggable="true" @dragstart.stop="startDragFromField(index, $event)">{{ fieldAssignments[index].name }}{{ isYoungPlayer(fieldAssignments[index]) ? ' (+4)' : '' }}</span>
+                    <span class="slot-player" draggable="true" @dragstart.stop="startDragFromField(index, $event)">{{ fieldAssignments[index].name }}{{ isForeignYoungPlayer(fieldAssignments[index]) ? ' (+4)' : '' }}</span>
                     <span class="small">{{ fieldAssignments[index].positions }}</span>
                     <button type="button" class="slot-remove" @click="removeFromField(index)">x</button>
                   </template>
@@ -120,7 +120,7 @@
                     @dragover.prevent
                     @drop.prevent="dropToBench(index, $event)">
                     <template v-if="player">
-                      <span class="slot-player small">{{ player.name }}{{ isYoungPlayer(player) ? ' (+4)' : '' }} <span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
+                      <span class="slot-player small">{{ player.name }}{{ isForeignYoungPlayer(player) ? ' (+4)' : '' }} <span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
                       <button type="button" class="slot-remove small" @click="removeFromBench(index)">x</button>
                     </template>
                     <template v-else>
@@ -149,7 +149,7 @@
                     @dragover.prevent
                     @drop.prevent="dropToFederation(index, $event)">
                     <template v-if="player">
-                      <span class="slot-player small">{{ player.name }}{{ isYoungPlayer(player) ? ' (+4)' : '' }} <span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
+                      <span class="slot-player small">{{ player.name }}{{ isForeignYoungPlayer(player) ? ' (+4)' : '' }} <span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
                       <button type="button" class="slot-remove small" @click="removeFromFederation(index)">x</button>
                     </template>
                     <template v-else>

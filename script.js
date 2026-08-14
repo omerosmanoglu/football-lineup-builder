@@ -1030,6 +1030,13 @@ new Vue({
       return Number(player.dogumYil) >= 2004;
     },
 
+    isForeignYoungPlayer: function (player) {
+      if (!player || !player.dogumYil) {
+        return false;
+      }
+      return !this.isTurkeyNationality(player.uyruk) && Number(player.dogumYil) >= 2004;
+    },
+
     countYoungForeignPlayers: function (players) {
       var self = this;
       return players.filter(function (p) {
