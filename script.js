@@ -1,4 +1,4 @@
-var YOUNG_PLAYER_BIRTH_YEAR = 2004;
+var YOUNG_PLAYER_BIRTH_YEAR = 2003;
 
 new Vue({
   el: "#app",
@@ -184,18 +184,25 @@ new Vue({
           warnings.push("🔴 Yabancı oyuncu: " + allForeign + " / 14 — " + foreignExcess + " yabancı oyuncu çıkarın.");
         }
         
-        if (allForeign > 10) {
-          var youngForeignCount = this.countYoungForeignPlayers(allPlayers);
-          if (youngForeignCount < 4) {
-            var youngNeeded = 4 - youngForeignCount;
-            var removeOldForeignCount = Math.min(youngNeeded, allForeign - 10);
-            var addYoungNeeded = 4 - youngForeignCount;
-            var msg = "🔴 Genç yabancı: " + youngForeignCount + " / 4 (10+ yabancı için) — " + addYoungNeeded + " genç yabancı (2004+) ekleyin.";
-            if (removeOldForeignCount > 0) {
-              msg += " Alternatif: " + removeOldForeignCount + " yaşlı yabancıyı çıkarıp " + addYoungNeeded + " genç yabancı ekleyebilirsiniz.";
-            }
-            warnings.push(msg);
-          }
+        // Genç yabancı kuralı: saha + yedek + federasyon_kadrosu'na göre
+        var youngForeignCount = this.countYoungForeignPlayers(allPlayers);
+        var requiredYoungForeign = 0;
+        
+        if (allForeign >= 14) {
+          requiredYoungForeign = 4;
+        } else if (allForeign === 13) {
+          requiredYoungForeign = 3;
+        } else if (allForeign === 12) {
+          requiredYoungForeign = 2;
+        } else if (allForeign === 11) {
+          requiredYoungForeign = 1;
+        }
+        
+        if (requiredYoungForeign > 0 && youngForeignCount < requiredYoungForeign) {
+          var youngNeeded = requiredYoungForeign - youngForeignCount;
+          var msg = "🔴 Genç yabancı: " + youngForeignCount + " / " + requiredYoungForeign + " (" + allForeign + " yabancı için) — " + youngNeeded + " genç yabancı ("+YOUNG_PLAYER_BIRTH_YEAR+"+) ekleyin.";
+          msg += " Alternatif: " + youngNeeded + " yaşlı yabancıyı çıkarıp " + youngNeeded + " genç yabancı ekleyebilirsiniz.";
+          warnings.push(msg);
         }
       } else {
         var maxPlayers = this.maxUEFAPlayers;
@@ -1052,7 +1059,7 @@ new Vue({
       if (!player || !player.dogumYil) {
         return false;
       }
-      return Number(player.dogumYil) >= 2004;
+      return Number(player.dogumYil) >= YOUNG_PLAYER_BIRTH_YEAR;
     },
 
     isForeignYoungPlayer: function (player) {

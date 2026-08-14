@@ -1,0 +1,336 @@
+{
+  "formasyon": "4-2-3-1",
+  "federasyon": "TFF",
+  "kadro": [
+    {
+      "name": "Emir Yaşar",
+      "positions": "Kaleci",
+      "uyruk": "Türkiye",
+      "deger": 0.1,
+      "dogumYil": 2006,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Yasin Özcan",
+      "positions": "Stoper",
+      "uyruk": "Türkiye",
+      "deger": 5,
+      "dogumYil": 2006,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Azem Yortaç",
+      "positions": "Stoper",
+      "uyruk": "Türkiye",
+      "deger": 0,
+      "dogumYil": 2008,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Cumali Gürsel",
+      "positions": "Stoper",
+      "uyruk": "Türkiye",
+      "deger": 0,
+      "dogumYil": 2007,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Jean Onana",
+      "positions": "Ön Libero",
+      "uyruk": "Kamerun",
+      "deger": 1,
+      "dogumYil": 2000,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Arda Kılıç",
+      "positions": "Sol Kanat",
+      "uyruk": "Türkiye",
+      "deger": 0.05,
+      "dogumYil": 2005,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Ozan Sevim",
+      "positions": "Sol Kanat",
+      "uyruk": "Türkiye",
+      "deger": 0,
+      "dogumYil": 2007,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Ahmet Sami Bircan",
+      "positions": "Santrafor",
+      "uyruk": "Türkiye",
+      "deger": 0,
+      "dogumYil": 2007,
+      "sakat": false,
+      "kadrodisi": false
+    }
+  ],
+  "saha": [
+    {
+      "name": "Alexander Nübel",
+      "positions": "Kaleci",
+      "uyruk": "Almanya",
+      "deger": 12,
+      "dogumYil": 1996,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Kassoum Ouattara",
+      "positions": "Sol Bek",
+      "uyruk": "Fransa / Fildişi Sahili",
+      "deger": 12,
+      "dogumYil": 2004,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Emmanuel Agbadou",
+      "positions": "Stoper",
+      "uyruk": "Fildişi Sahili",
+      "deger": 16,
+      "dogumYil": 1997,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Tiago Djaló",
+      "positions": "Stoper",
+      "uyruk": "Portekiz / Gine-Bissau",
+      "deger": 7,
+      "dogumYil": 2000,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Amir Murillo",
+      "positions": "Sağ Bek",
+      "uyruk": "Panama",
+      "deger": 7,
+      "dogumYil": 1996,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Wilfred Ndidi",
+      "positions": "Ön Libero",
+      "uyruk": "Nijerya / İngiltere",
+      "deger": 8,
+      "dogumYil": 1996,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Junior Olaitan",
+      "positions": "On Numara",
+      "uyruk": "Benin / Nijerya",
+      "deger": 7,
+      "dogumYil": 2002,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Leandro Trossard",
+      "positions": "Sol Kanat",
+      "uyruk": "Belçika",
+      "deger": 18,
+      "dogumYil": 1994,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Orkun Kökçü",
+      "positions": "Merkez Orta Saha",
+      "uyruk": "Türkiye / Hollanda",
+      "deger": 25,
+      "dogumYil": 2000,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Vaclav Cerny",
+      "positions": "Sağ Kanat",
+      "uyruk": "Çek Cumhuriyeti",
+      "deger": 7,
+      "dogumYil": 1997,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Dušan Vlahović",
+      "positions": "Santrafor",
+      "uyruk": "Sırbistan",
+      "deger": 35,
+      "dogumYil": 2000,
+      "sakat": false,
+      "kadrodisi": false
+    }
+  ],
+  "yedek": [
+    {
+      "name": "Doğan Alemdar",
+      "positions": "Kaleci",
+      "uyruk": "Türkiye",
+      "deger": 1.5,
+      "dogumYil": 2002,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Emirhan Topçu",
+      "positions": "Stoper",
+      "uyruk": "Türkiye",
+      "deger": 7,
+      "dogumYil": 2000,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Felix Uduokhai",
+      "positions": "Stoper",
+      "uyruk": "Almanya / Nijerya",
+      "deger": 3.5,
+      "dogumYil": 1997,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Rıdvan Yılmaz",
+      "positions": "Sol Bek",
+      "uyruk": "Türkiye",
+      "deger": 5,
+      "dogumYil": 2001,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Taylan Bulut",
+      "positions": "Sağ Bek",
+      "uyruk": "Almanya / Türkiye",
+      "deger": 5,
+      "dogumYil": 2006,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Amir Hadziahmetovic",
+      "positions": "Ön Libero",
+      "uyruk": "Bosna-Hersek / Danimarka",
+      "deger": 4,
+      "dogumYil": 1997,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Moatasem Al-Musrati",
+      "positions": "Ön Libero",
+      "uyruk": "Libya / Portekiz",
+      "deger": 4.5,
+      "dogumYil": 1996,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Can Keleş",
+      "positions": "Sağ Kanat",
+      "uyruk": "Avusturya / Türkiye",
+      "deger": 1.2,
+      "dogumYil": 2001,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Hyeon-gyu Oh",
+      "positions": "Santrafor",
+      "uyruk": "Güney Kore",
+      "deger": 15,
+      "dogumYil": 2001,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Semih Kılıçsoy",
+      "positions": "Santrafor",
+      "uyruk": "Türkiye",
+      "deger": 11,
+      "dogumYil": 2005,
+      "sakat": false,
+      "kadrodisi": false
+    }
+  ],
+  "federasyon_kadrosu": [
+    {
+      "name": "Emre Bilgin",
+      "positions": "Kaleci",
+      "uyruk": "Türkiye",
+      "deger": 0.4,
+      "dogumYil": 2004,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Emrecan Uzunhan",
+      "positions": "Stoper",
+      "uyruk": "Türkiye",
+      "deger": 0.5,
+      "dogumYil": 2001,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Salih Özcan",
+      "positions": "Ön Libero",
+      "uyruk": "Türkiye / Almanya",
+      "deger": 3.5,
+      "dogumYil": 1998,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Kartal Yılmaz",
+      "positions": "Ön Libero",
+      "uyruk": "Türkiye",
+      "deger": 2.5,
+      "dogumYil": 2000,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "İlhan Fakılı",
+      "positions": "Sol Kanat",
+      "uyruk": "Türkiye / Fransa",
+      "deger": 1.2,
+      "dogumYil": 2006,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Fahri Ay",
+      "positions": "Merkez Orta Saha",
+      "uyruk": "Türkiye",
+      "deger": 0.25,
+      "dogumYil": 2005,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Mustafa Hekimoğlu",
+      "positions": "Santrafor",
+      "uyruk": "Türkiye",
+      "deger": 5,
+      "dogumYil": 2007,
+      "sakat": false,
+      "kadrodisi": false
+    }
+  ]
+}

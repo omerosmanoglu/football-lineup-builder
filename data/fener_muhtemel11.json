@@ -9,7 +9,7 @@
       "deger": 4,
       "dogumYil": 1995,
       "sakat": false,
-      "kadrodisi": false
+      "kadrodisi": true
     },
     {
       "name": "Diego Carlos",
@@ -18,7 +18,7 @@
       "deger": 5,
       "dogumYil": 1993,
       "sakat": false,
-      "kadrodisi": false
+      "kadrodisi": true
     },
     {
       "name": "Rodrigo Becão",
@@ -27,7 +27,7 @@
       "deger": 2,
       "dogumYil": 1996,
       "sakat": false,
-      "kadrodisi": false
+      "kadrodisi": true
     },
     {
       "name": "Omar Fayed",
@@ -72,7 +72,7 @@
       "deger": 0,
       "dogumYil": 1994,
       "sakat": false,
-      "kadrodisi": false
+      "kadrodisi": true
     },
     {
       "name": "Anthony Musaba",
@@ -80,7 +80,7 @@
       "uyruk": "Hollanda / Kongo DC",
       "deger": 7,
       "dogumYil": 2000,
-      "sakat": false,
+      "sakat": true,
       "kadrodisi": false
     },
     {
@@ -93,13 +93,13 @@
       "kadrodisi": false
     },
     {
-      "name": "Adem Yeşilyurt",
+      "name": "Cengiz Ünder",
       "positions": "Sağ Kanat",
       "uyruk": "Türkiye",
-      "deger": 0,
-      "dogumYil": 2007,
+      "deger": 4,
+      "dogumYil": 1997,
       "sakat": false,
-      "kadrodisi": false
+      "kadrodisi": true
     },
     {
       "name": "Sidiki Chérif",
@@ -259,20 +259,20 @@
       "kadrodisi": false
     },
     {
-      "name": "Kerem Aktürkoğlu",
-      "positions": "Sol Kanat",
-      "uyruk": "Türkiye",
-      "deger": 20,
-      "dogumYil": 1998,
-      "sakat": false,
-      "kadrodisi": false
-    },
-    {
       "name": "Oğuz Aydın",
       "positions": "Sol Kanat",
       "uyruk": "Türkiye / Hollanda",
       "deger": 7,
       "dogumYil": 2000,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Kerem Aktürkoğlu",
+      "positions": "Sol Kanat",
+      "uyruk": "Türkiye",
+      "deger": 20,
+      "dogumYil": 1998,
       "sakat": false,
       "kadrodisi": false
     },
@@ -342,20 +342,11 @@
       "kadrodisi": false
     },
     {
-      "name": "Cengiz Ünder",
+      "name": "Adem Yeşilyurt",
       "positions": "Sağ Kanat",
       "uyruk": "Türkiye",
-      "deger": 4,
-      "dogumYil": 1997,
-      "sakat": false,
-      "kadrodisi": false
-    },
-    {
-      "name": "Çağrı Fedai",
-      "positions": "Santrafor",
-      "uyruk": "Türkiye / Kuzey Makedonya",
-      "deger": 0.15,
-      "dogumYil": 2006,
+      "deger": 0,
+      "dogumYil": 2007,
       "sakat": false,
       "kadrodisi": false
     },
@@ -365,6 +356,15 @@
       "uyruk": "Türkiye",
       "deger": 0.5,
       "dogumYil": 2004,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Çağrı Fedai",
+      "positions": "Santrafor",
+      "uyruk": "Türkiye / Kuzey Makedonya",
+      "deger": 0.15,
+      "dogumYil": 2006,
       "sakat": false,
       "kadrodisi": false
     }
