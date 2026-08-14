@@ -959,41 +959,28 @@ new Vue({
     },
 
     dropToFederation: function (index, event) {
-      event.preventDefault();
-      if (!this.draggedContext) {
+      var ctx = this.resolveDraggedContext(event);
+      if (!ctx) {
         return;
       }
 
-      var fromSquad = this.draggedContext.source === "squad";
-      var fromField = this.draggedContext.source === "field";
-      var fromBench = this.draggedContext.source === "bench";
-      var fromFederation = this.draggedContext.source === "federation";
+      this.draggedContext = ctx;
 
-      var player = this.draggedContext.player;
-      if (!player) {
-        this.draggedContext = null;
+      if (ctx.source === "federation" && ctx.index === index) {
         return;
       }
 
-      if (this.federationAssignments.indexOf(player) !== -1) {
-        this.draggedContext = null;
+      var picked = this.takeDraggedPlayer();
+      if (!picked.player) {
+        this.clearDraggedContext();
         return;
       }
 
-      if (fromFederation) {
-        this.$set(this.federationAssignments, this.draggedContext.index, null);
-        this.$set(this.federationAssignments, index, player);
-      } else {
-        var emptyIndex = this.federationAssignments.indexOf(null);
-        if (emptyIndex === -1) {
-          this.draggedContext = null;
-          return;
-        }
-        this.$set(this.federationAssignments, emptyIndex, player);
-      }
+      var targetPlayer = this.federationAssignments[index] || null;
+      this.$set(this.federationAssignments, index, picked.player);
+      this.placeBackToSource(picked.ctx, targetPlayer);
 
-      this.savePlayersToLocalStorage();
-      this.draggedContext = null;
+      this.clearDraggedContext();
     },
 
     removeFromFederation: function (index) {
