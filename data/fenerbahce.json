@@ -1,6 +1,7 @@
 [
   {
     "name": "Ederson",
+    "dogumYil": 1993,
     "positions": "Kaleci",
     "uyruk": "Brezilya / Portekiz",
     "deger": 10,
@@ -9,6 +10,7 @@
   },
   {
     "name": "Dominik Livakovic",
+    "dogumYil": 1995,
     "positions": "Kaleci",
     "uyruk": "Hırvatistan",
     "deger": 4,
@@ -17,6 +19,7 @@
   },
   {
     "name": "Tarık Çetin",
+    "dogumYil": 1997,
     "positions": "Kaleci",
     "uyruk": "Türkiye",
     "deger": 0.6,
@@ -25,6 +28,7 @@
   },
   {
     "name": "Mert Günok",
+    "dogumYil": 1989,
     "positions": "Kaleci",
     "uyruk": "Türkiye",
     "deger": 0.5,
@@ -33,6 +37,7 @@
   },
   {
     "name": "Jayden Oosterwolde",
+    "dogumYil": 2001,
     "positions": "Stoper",
     "uyruk": "Hollanda / Surinam",
     "deger": 20,
@@ -41,6 +46,7 @@
   },
   {
     "name": "Nathan Aké",
+    "dogumYil": 1995,
     "positions": "Stoper",
     "uyruk": "Hollanda / Fildişi Sahili",
     "deger": 12,
@@ -49,6 +55,7 @@
   },
   {
     "name": "Milan Škriniar",
+    "dogumYil": 1995,
     "positions": "Stoper",
     "uyruk": "Slovakya",
     "deger": 10,
@@ -57,6 +64,7 @@
   },
   {
     "name": "Yiğit Efe Demir",
+    "dogumYil": 2004,
     "positions": "Stoper",
     "uyruk": "Türkiye",
     "deger": 6,
@@ -65,6 +73,7 @@
   },
   {
     "name": "Diego Carlos",
+    "dogumYil": 1993,
     "positions": "Stoper",
     "uyruk": "Brezilya / İspanya",
     "deger": 5,
@@ -73,6 +82,7 @@
   },
   {
     "name": "Rodrigo Becão",
+    "dogumYil": 1996,
     "positions": "Stoper",
     "uyruk": "Brezilya",
     "deger": 2,
@@ -81,6 +91,7 @@
   },
   {
     "name": "Yiğit Fidan",
+    "dogumYil": 2005,
     "positions": "Stoper",
     "uyruk": "Türkiye",
     "deger": 1,
@@ -89,6 +100,7 @@
   },
   {
     "name": "Archie Brown",
+    "dogumYil": 2002,
     "positions": "Sol Bek",
     "uyruk": "İngiltere / Jamaika",
     "deger": 12,
@@ -97,6 +109,7 @@
   },
   {
     "name": "Levent Mercan",
+    "dogumYil": 2000,
     "positions": "Sol Bek",
     "uyruk": "Türkiye / Almanya",
     "deger": 5,
@@ -105,6 +118,7 @@
   },
   {
     "name": "Ognjen Mimović",
+    "dogumYil": 2004,
     "positions": "Sağ Bek",
     "uyruk": "Sırbistan",
     "deger": 2.7,
@@ -113,6 +127,7 @@
   },
   {
     "name": "Mustafa Akyıldız",
+    "dogumYil": 2006,
     "positions": "Sağ Bek",
     "uyruk": "Türkiye",
     "deger": 0,
@@ -121,6 +136,7 @@
   },
   {
     "name": "İsmail Yüksek",
+    "dogumYil": 1999,
     "positions": "Ön Libero",
     "uyruk": "Türkiye",
     "deger": 15,
@@ -129,6 +145,7 @@
   },
   {
     "name": "Sofyan Amrabat",
+    "dogumYil": 1996,
     "positions": "Ön Libero",
     "uyruk": "Fas / Hollanda",
     "deger": 10,
@@ -137,6 +154,7 @@
   },
   {
     "name": "N'Golo Kanté",
+    "dogumYil": 1991,
     "positions": "Ön Libero",
     "uyruk": "Fransa / Mali",
     "deger": 4,
@@ -145,6 +163,7 @@
   },
   {
     "name": "Bartuğ Elmaz",
+    "dogumYil": 2003,
     "positions": "Ön Libero",
     "uyruk": "Türkiye",
     "deger": 1.5,
@@ -153,6 +172,7 @@
   },
   {
     "name": "Mattéo Guendouzi",
+    "dogumYil": 1999,
     "positions": "Merkez Orta Saha",
     "uyruk": "Fransa / Fas",
     "deger": 27,
@@ -161,6 +181,7 @@
   },
   {
     "name": "Abdou Aziz Fall",
+    "dogumYil": 2007,
     "positions": "Merkez Orta Saha",
     "uyruk": "Senegal",
     "deger": 0.1,
@@ -169,6 +190,7 @@
   },
   {
     "name": "Marco Asensio",
+    "dogumYil": 1996,
     "positions": "On Numara",
     "uyruk": "İspanya / Hollanda",
     "deger": 15,
@@ -177,6 +199,7 @@
   },
   {
     "name": "Talisca",
+    "dogumYil": 1994,
     "positions": "On Numara",
     "uyruk": "Brezilya",
     "deger": 7,
@@ -185,6 +208,7 @@
   },
   {
     "name": "Kerem Aktürkoğlu",
+    "dogumYil": 1998,
     "positions": "Sol Kanat",
     "uyruk": "Türkiye",
     "deger": 20,
@@ -193,6 +217,7 @@
   },
   {
     "name": "Anthony Musaba",
+    "dogumYil": 2000,
     "positions": "Sol Kanat",
     "uyruk": "Hollanda / Kongo DC",
     "deger": 7,
@@ -201,6 +226,7 @@
   },
   {
     "name": "Oğuz Aydın",
+    "dogumYil": 2000,
     "positions": "Sol Kanat",
     "uyruk": "Türkiye / Hollanda",
     "deger": 7,
@@ -209,6 +235,7 @@
   },
   {
     "name": "Amara Diouf",
+    "dogumYil": 2008,
     "positions": "Sol Kanat",
     "uyruk": "Senegal",
     "deger": 0.8,
@@ -217,6 +244,7 @@
   },
   {
     "name": "Mason Greenwood",
+    "dogumYil": 2001,
     "positions": "Sağ Kanat",
     "uyruk": "İngiltere / Jamaika",
     "deger": 55,
@@ -225,6 +253,7 @@
   },
   {
     "name": "Dorgeles Nene",
+    "dogumYil": 2002,
     "positions": "Sağ Kanat",
     "uyruk": "Mali",
     "deger": 20,
@@ -233,6 +262,7 @@
   },
   {
     "name": "İrfan Can Kahveci",
+    "dogumYil": 1995,
     "positions": "Sağ Kanat",
     "uyruk": "Türkiye",
     "deger": 3,
@@ -241,6 +271,7 @@
   },
   {
     "name": "Adem Yeşilyurt",
+    "dogumYil": 2007,
     "positions": "Sağ Kanat",
     "uyruk": "Türkiye",
     "deger": 0,
@@ -249,6 +280,7 @@
   },
   {
     "name": "Sidiki Chérif",
+    "dogumYil": 2006,
     "positions": "Santrafor",
     "uyruk": "Gine",
     "deger": 18,
@@ -257,6 +289,7 @@
   },
   {
     "name": "Romelu Lukaku",
+    "dogumYil": 1993,
     "positions": "Santrafor",
     "uyruk": "Belçika / Kongo DC",
     "deger": 6,
@@ -265,6 +298,7 @@
   },
   {
     "name": "Vedat Muriqi",
+    "dogumYil": 1994,
     "positions": "Santrafor",
     "uyruk": "Kosova / Arnavutluk",
     "deger": 4.5,
@@ -273,6 +307,7 @@
   },
   {
     "name": "Çağrı Fedai",
+    "dogumYil": 2006,
     "positions": "Santrafor",
     "uyruk": "Türkiye / Kuzey Makedonya",
     "deger": 0.15,

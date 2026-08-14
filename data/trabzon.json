@@ -1,0 +1,245 @@
+[
+  {
+    "name": "Onuralp Çevikkan",
+    "dogumYil": 2006,
+    "positions": "Kaleci",
+    "uyruk": "Türkiye",
+    "deger": 1,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Ahmet Yıldırım",
+    "dogumYil": 2006,
+    "positions": "Kaleci",
+    "uyruk": "Türkiye",
+    "deger": 0.2,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Erol Can Çolak",
+    "dogumYil": 2006,
+    "positions": "Kaleci",
+    "uyruk": "Türkiye",
+    "deger": 0,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Arseniy Batagov",
+    "dogumYil": 2002,
+    "positions": "Stoper",
+    "uyruk": "Ukrayna",
+    "deger": 11,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Chibuike Nwaiwu",
+    "dogumYil": 2003,
+    "positions": "Stoper",
+    "uyruk": "Nijerya",
+    "deger": 10,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Cenk Özkacar",
+    "dogumYil": 2000,
+    "positions": "Stoper",
+    "uyruk": "Türkiye",
+    "deger": 4,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Samet Akaydin",
+    "dogumYil": 1994,
+    "positions": "Stoper",
+    "uyruk": "Türkiye",
+    "deger": 1.2,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Arda Öztürk",
+    "dogumYil": 2007,
+    "positions": "Stoper",
+    "uyruk": "Türkiye",
+    "deger": 0.1,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Sidny Lopes Cabral",
+    "dogumYil": 2002,
+    "positions": "Sol Bek",
+    "uyruk": "Yeşil Burun Adaları / Hollanda",
+    "deger": 10,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Wagner Pina",
+    "dogumYil": 2002,
+    "positions": "Sağ Bek",
+    "uyruk": "Yeşil Burun Adaları / Portekiz",
+    "deger": 11,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Oğuzhan Yılmaz",
+    "dogumYil": 2006,
+    "positions": "Sağ Bek",
+    "uyruk": "Türkiye",
+    "deger": 0.375,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Melih Kabasakal",
+    "dogumYil": 1996,
+    "positions": "Ön Libero",
+    "uyruk": "Türkiye",
+    "deger": 0.6,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Tim Jabol-Folcarelli",
+    "dogumYil": 1999,
+    "positions": "Merkez Orta Saha",
+    "uyruk": "Fransa / Martinique",
+    "deger": 7,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Benjamin Bouchouari",
+    "dogumYil": 2001,
+    "positions": "Merkez Orta Saha",
+    "uyruk": "Fas / Belçika",
+    "deger": 4.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Ruslan Malinovskyi",
+    "dogumYil": 1993,
+    "positions": "Merkez Orta Saha",
+    "uyruk": "Ukrayna",
+    "deger": 2.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Ernest Muci",
+    "dogumYil": 2001,
+    "positions": "On Numara",
+    "uyruk": "Arnavutluk",
+    "deger": 11,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Muhammed Cham",
+    "dogumYil": 2000,
+    "positions": "On Numara",
+    "uyruk": "Avusturya",
+    "deger": 3.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Göktan Gürpüz",
+    "dogumYil": 2003,
+    "positions": "On Numara",
+    "uyruk": "Türkiye / Almanya",
+    "deger": 2,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Aral Şimşir",
+    "dogumYil": 2002,
+    "positions": "Sol Kanat",
+    "uyruk": "Türkiye / Danimarka",
+    "deger": 10,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Noah Saviolo",
+    "dogumYil": 2004,
+    "positions": "Sol Kanat",
+    "uyruk": "Portekiz / Belçika",
+    "deger": 10,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Kazeem Olaigbe",
+    "dogumYil": 2003,
+    "positions": "Sol Kanat",
+    "uyruk": "Belçika / Nijerya",
+    "deger": 4,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Thierry Karadeniz",
+    "dogumYil": 2008,
+    "positions": "Sol Kanat",
+    "uyruk": "Türkiye / Almanya",
+    "deger": 0,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Mohamed Salah",
+    "dogumYil": 1992,
+    "positions": "Sağ Kanat",
+    "uyruk": "Mısır",
+    "deger": 22,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Paul Onuachu",
+    "dogumYil": 1994,
+    "positions": "Santrafor",
+    "uyruk": "Nijerya",
+    "deger": 6,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Denis Drăguș",
+    "dogumYil": 1999,
+    "positions": "Santrafor",
+    "uyruk": "Romanya",
+    "deger": 2,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Poyraz Yıldırım",
+    "dogumYil": 2005,
+    "positions": "Santrafor",
+    "uyruk": "Türkiye",
+    "deger": 1.2,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "René Mitongo",
+    "dogumYil": 2008,
+    "positions": "Santrafor",
+    "uyruk": "Belçika",
+    "deger": 1,
+    "sakat": false,
+    "kadrodisi": false
+  }
+]

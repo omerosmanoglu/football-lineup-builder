@@ -103,6 +103,38 @@ new Vue({
     federationTotal: function () {
       return this.sumPlayers(this.federationAssignments);
     },
+    first11NationalityStats: function () {
+      var fieldPlayers = this.fieldAssignments.filter(Boolean);
+      var turkishCount = fieldPlayers.filter(function (p) {
+        return this.isTurkeyNationality(p.uyruk);
+      }, this).length;
+      var foreignCount = fieldPlayers.length - turkishCount;
+      return { turkishCount: turkishCount, foreignCount: foreignCount, total: fieldPlayers.length };
+    },
+    benchNationalityStats: function () {
+      var benchPlayers = this.benchAssignments.filter(Boolean);
+      var turkishCount = benchPlayers.filter(function (p) {
+        return this.isTurkeyNationality(p.uyruk);
+      }, this).length;
+      var foreignCount = benchPlayers.length - turkishCount;
+      return { turkishCount: turkishCount, foreignCount: foreignCount, total: benchPlayers.length };
+    },
+    federationNationalityStats: function () {
+      var federationPlayers = this.federationAssignments.filter(Boolean);
+      var turkishCount = federationPlayers.filter(function (p) {
+        return this.isTurkeyNationality(p.uyruk);
+      }, this).length;
+      var foreignCount = federationPlayers.length - turkishCount;
+      return { turkishCount: turkishCount, foreignCount: foreignCount, total: federationPlayers.length };
+    },
+    outNationalityStats: function () {
+      var outPlayers = this.players.filter(Boolean);
+      var turkishCount = outPlayers.filter(function (p) {
+        return this.isTurkeyNationality(p.uyruk);
+      }, this).length;
+      var foreignCount = outPlayers.length - turkishCount;
+      return { turkishCount: turkishCount, foreignCount: foreignCount, total: outPlayers.length };
+    },
     validationWarnings: function () {
       var warnings = [];
       var fieldPlayers = this.fieldAssignments.filter(Boolean);
