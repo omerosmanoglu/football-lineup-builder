@@ -1,3 +1,5 @@
+var YOUNG_PLAYER_BIRTH_YEAR = 2004;
+
 new Vue({
   el: "#app",
   data: function () {
@@ -323,6 +325,7 @@ new Vue({
         positions: String(rawPlayer.positions || "").trim(),
         uyruk: String(rawPlayer.uyruk || "-").trim() || "-",
         deger: Number.isFinite(value) ? value : 0,
+        dogumYil: Number(rawPlayer.dogumYil) || new Date().getFullYear(),
         sakat: Boolean(rawPlayer.sakat),
         kadrodisi: Boolean(rawPlayer.kadrodisi)
       };
@@ -1056,7 +1059,7 @@ new Vue({
       if (!player || !player.dogumYil) {
         return false;
       }
-      return !this.isTurkeyNationality(player.uyruk) && Number(player.dogumYil) >= 2004;
+      return !this.isTurkeyNationality(player.uyruk) && Number(player.dogumYil) >= YOUNG_PLAYER_BIRTH_YEAR;
     },
 
     countYoungForeignPlayers: function (players) {
