@@ -17,8 +17,8 @@
       "uyruk": "Brezilya / İspanya",
       "deger": 5,
       "dogumYil": 1993,
-      "sakat": false,
-      "kadrodisi": true
+      "sakat": true,
+      "kadrodisi": false
     },
     {
       "name": "Rodrigo Becão",
@@ -26,8 +26,8 @@
       "uyruk": "Brezilya",
       "deger": 2,
       "dogumYil": 1996,
-      "sakat": false,
-      "kadrodisi": true
+      "sakat": true,
+      "kadrodisi": false
     },
     {
       "name": "Omar Fayed",
@@ -54,7 +54,7 @@
       "deger": 10,
       "dogumYil": 1996,
       "sakat": false,
-      "kadrodisi": false
+      "kadrodisi": true
     },
     {
       "name": "Abdou Aziz Fall",
@@ -98,16 +98,16 @@
       "uyruk": "Türkiye",
       "deger": 4,
       "dogumYil": 1997,
-      "sakat": false,
-      "kadrodisi": true
+      "sakat": true,
+      "kadrodisi": false
     },
     {
-      "name": "Sidiki Chérif",
+      "name": "Vedat Muriqi",
       "positions": "Santrafor",
-      "uyruk": "Gine",
-      "deger": 18,
-      "dogumYil": 2006,
-      "sakat": false,
+      "uyruk": "Kosova / Arnavutluk",
+      "deger": 4.5,
+      "dogumYil": 1994,
+      "sakat": true,
       "kadrodisi": false
     }
   ],
@@ -126,7 +126,7 @@
       "positions": "Sol Bek",
       "uyruk": "İngiltere / Jamaika",
       "deger": 12,
-      "dogumYil": 2002,
+      "dogumYil": 2003,
       "sakat": false,
       "kadrodisi": false
     },
@@ -180,7 +180,7 @@
       "positions": "Sağ Kanat",
       "uyruk": "Mali",
       "deger": 20,
-      "dogumYil": 2002,
+      "dogumYil": 2003,
       "sakat": false,
       "kadrodisi": false
     },
@@ -223,20 +223,20 @@
       "kadrodisi": false
     },
     {
-      "name": "Milan Škriniar",
-      "positions": "Stoper",
-      "uyruk": "Slovakya",
-      "deger": 10,
-      "dogumYil": 1995,
-      "sakat": false,
-      "kadrodisi": false
-    },
-    {
       "name": "Levent Mercan",
       "positions": "Sol Bek",
       "uyruk": "Türkiye / Almanya",
       "deger": 5,
       "dogumYil": 2000,
+      "sakat": false,
+      "kadrodisi": false
+    },
+    {
+      "name": "Milan Škriniar",
+      "positions": "Stoper",
+      "uyruk": "Slovakya",
+      "deger": 10,
+      "dogumYil": 1995,
       "sakat": false,
       "kadrodisi": false
     },
@@ -286,11 +286,11 @@
       "kadrodisi": false
     },
     {
-      "name": "Vedat Muriqi",
+      "name": "Sidiki Chérif",
       "positions": "Santrafor",
-      "uyruk": "Kosova / Arnavutluk",
-      "deger": 4.5,
-      "dogumYil": 1994,
+      "uyruk": "Gine",
+      "deger": 18,
+      "dogumYil": 2006,
       "sakat": false,
       "kadrodisi": false
     },

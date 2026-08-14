@@ -201,7 +201,7 @@ new Vue({
         if (requiredYoungForeign > 0 && youngForeignCount < requiredYoungForeign) {
           var youngNeeded = requiredYoungForeign - youngForeignCount;
           var msg = "🔴 Genç yabancı: " + youngForeignCount + " / " + requiredYoungForeign + " (" + allForeign + " yabancı için) — " + youngNeeded + " genç yabancı ("+YOUNG_PLAYER_BIRTH_YEAR+"+) ekleyin.";
-          msg += " Alternatif: " + youngNeeded + " yaşlı yabancıyı çıkarıp " + youngNeeded + " genç yabancı ekleyebilirsiniz.";
+          msg += "  " + youngNeeded + " yaşlı yabancıyı çıkarıp " + youngNeeded + " genç yabancı ekleyebilirsiniz.";
           warnings.push(msg);
         }
       } else {
@@ -211,7 +211,7 @@ new Vue({
           var excess = allPlayers.length - maxPlayers;
           var msg = "🔴 Toplam oyuncu: " + allPlayers.length + " / " + maxPlayers + " (" + allTurkish + " Türk için) — " + excess + " oyuncu çıkarın.";
           if (needMore > 0) {
-            msg += " Alternatif: 25 oyuncu yazabilmek için " + needMore + " Türk oyuncu daha seçebilirsiniz.";
+            msg += "  25 oyuncu yazabilmek için " + needMore + " Türk oyuncu daha seçebilirsiniz.";
           }
           warnings.push(msg);
         }
@@ -1154,10 +1154,11 @@ new Vue({
 
     removeFromFederation: function (index) {
       var player = this.federationAssignments[index];
-      if (player) {
-        this.$set(this.federationAssignments, index, null);
-        this.savePlayersToLocalStorage();
+      if (!player) {
+        return;
       }
+      this.$set(this.federationAssignments, index, null);
+      this.addBackToSquad(player);
     },
 
     loadFormations: async function () {
