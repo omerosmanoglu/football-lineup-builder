@@ -11,7 +11,7 @@
   <body class="bg-light">
     <div id="app" class="container-fluid py-3 app-scale">
       <div class="row g-3 align-items-stretch">
-        <div id="divKadro" class="col-2 col-md-2 col-lg-3">
+        <div id="divKadro" class="col-2 col-md-2 col-lg-2">
           <div class="card h-100 shadow-sm">
             <div class="card-header fw-semibold">Kadro</div>
             <div class="card-body d-flex flex-column gap-2">
@@ -79,79 +79,144 @@
           </div>
         </div>
 
-        <div id="divRapor" class="col-12 col-lg-3">
+        <div id="divRapor1" class="col-6 col-lg-2">
           <div class="card h-100 shadow-sm">
-            <div class="card-header fw-semibold">Formasyon</div>
-            <div class="card-body">
-              <label for="formationSelector" class="form-label">Formasyon Seç</label>
-              <select id="formationSelector" class="form-select" v-model="selectedFormation" @change="onFormationChange">
-                <option v-for="name in formationNames" :key="name" :value="name">{{ name }}</option>
-              </select>
-
-              <hr class="my-3" />
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="fw-semibold">Yedek Kadro</span>
-                <span class="badge text-bg-secondary">7 Kişi</span>
-              </div>
-              <div class="bench-grid" aria-label="Yedek kadro alanı">
-                <div
-                  v-for="(player, index) in benchAssignments"
-                  :key="'bench-' + index"
-                  class="bench-slot"
-                  :class="{ occupied: !!player }"
-                  :draggable="!!player"
-                  @dragstart="startDragFromBench(index, $event)"
-                  @dragend="clearDraggedContext"
-                  @dragover.prevent
-                  @drop.prevent="dropToBench(index, $event)">
-                  <template v-if="player">
-                    <span class="slot-player">{{ player.name }} ({{ player.positions }})</span>
-                    <button type="button" class="slot-remove" @click="removeFromBench(index)">x</button>
-                  </template>
-                  <template v-else>Yedek {{ index + 1 }}</template>
+            <div class="card-header fw-semibold">Yedek &amp; Fed. Kadrosu</div>
+            <div class="card-body d-flex flex-column gap-2">
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="small fw-semibold">Yedek Kadro</span>
+                  <span class="badge text-bg-secondary">{{ benchAssignments.filter(Boolean).length }}/{{ benchSize }}</span>
+                </div>
+                <div class="bench-grid" aria-label="Yedek kadro alanı" style="max-height: 800px; overflow-y: auto;">
+                  <div
+                    v-for="(player, index) in benchAssignments"
+                    :key="'bench-' + index"
+                    class="bench-slot"
+                    :class="{ occupied: !!player }"
+                    :draggable="!!player"
+                    @dragstart="startDragFromBench(index, $event)"
+                    @dragend="clearDraggedContext"
+                    @dragover.prevent
+                    @drop.prevent="dropToBench(index, $event)">
+                    <template v-if="player">
+                      <span class="slot-player small">{{ player.name }}</span>
+                      <button type="button" class="slot-remove small" @click="removeFromBench(index)">x</button>
+                    </template>
+                    <template v-else>
+                      <span class="small text-muted">Y{{ index + 1 }}</span>
+                    </template>
+                  </div>
                 </div>
               </div>
 
-              <hr class="my-3" />
-              <div class="fw-semibold mb-2">Kadro Değerleri</div>
-              <div class="small value-summary">
-                <div class="d-flex justify-content-between">
-                  <span>İlk 11 Kadro Değeri</span>
-                  <strong>{{ formatMoney(first11Total) }}</strong>
+              <hr class="my-2" />
+
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="small fw-semibold">Federasyon Kadrosu</span>
+                  <span class="badge text-bg-info">{{ federationAssignments.filter(Boolean).length }}/{{ federationSquadSize }}</span>
                 </div>
-                <div class="d-flex justify-content-between">
-                  <span>Yedek Kulübe Kadro Değeri</span>
-                  <strong>{{ formatMoney(benchTotal) }}</strong>
+                <div class="bench-grid" aria-label="Federasyon kadrosu alanı" style="max-height: 800px; overflow-y: auto;">
+                  <div
+                    v-for="(player, index) in federationAssignments"
+                    :key="'fed-' + index"
+                    class="bench-slot"
+                    :class="{ occupied: !!player }"
+                    draggable="true"
+                    @dragstart="startDragFromFederation(index, $event)"
+                    @dragend="clearDraggedContext"
+                    @dragover.prevent
+                    @drop.prevent="dropToFederation(index, $event)">
+                    <template v-if="player">
+                      <span class="slot-player small">{{ player.name }}</span>
+                      <button type="button" class="slot-remove small" @click="removeFromFederation(index)">x</button>
+                    </template>
+                    <template v-else>
+                      <span class="small text-muted">F{{ index + 1 }}</span>
+                    </template>
+                  </div>
                 </div>
-                <div class="d-flex justify-content-between">
-                  <span>Kadro Dışı Kadro Değeri</span>
-                  <strong>{{ formatMoney(outTotal) }}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="divRapor2" class="col-6 col-lg-2">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header fw-semibold">Ayarlar &amp; Uyarılar</div>
+            <div class="card-body d-flex flex-column gap-3" style="overflow-y: auto;">
+              <div>
+                <label for="federationSelector" class="form-label small">Federasyon</label>
+                <select id="federationSelector" class="form-select form-select-sm" v-model="selectedFederation" @change="onFederationChange">
+                  <option value="TFF">TFF</option>
+                  <option value="UEFA">UEFA</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="formationSelector" class="form-label small">Formasyon</label>
+                <select id="formationSelector" class="form-select form-select-sm" v-model="selectedFormation" @change="onFormationChange">
+                  <option v-for="name in formationNames" :key="name" :value="name">{{ name }}</option>
+                </select>
+              </div>
+
+              <div v-if="validationWarnings.length > 0">
+                <div class="alert alert-warning py-2 px-3 mb-0 small">
+                  <strong>Uyarılar:</strong>
+                  <ul class="mb-0 mt-1 ps-3">
+                    <li v-for="(warning, index) in validationWarnings" :key="'warning-' + index">{{ warning }}</li>
+                  </ul>
                 </div>
               </div>
 
-              <hr class="my-3" />
-              <div class="fw-semibold mb-2">Uyruk Listesi</div>
+              <div v-else>
+                <div class="alert alert-success py-2 px-3 mb-0 small">✓ Kurallar OK</div>
+              </div>
 
-              <div class="small mb-2 fw-semibold">İlk 11 Uyruk Listesi</div>
-              <ul class="nationality-list mb-3">
-                <li v-for="item in first11NationalityCounts" :key="'f11-' + item.uyruk">
-                  <span :class="{ 'fw-semibold': item.isForeignTotal, 'text-danger fw-semibold': item.isTurkey || item.isForeignTotal }">{{ item.uyruk }} ({{ item.count }})</span>
-                </li>
-              </ul>
+              <hr class="my-2" />
 
-              <div class="small mb-2 fw-semibold">Yedek Uyruk Listesi</div>
-              <ul class="nationality-list mb-3">
-                <li v-for="item in benchNationalityCounts" :key="'bench-' + item.uyruk">
-                  <span :class="{ 'fw-semibold': item.isForeignTotal, 'text-danger fw-semibold': item.isTurkey || item.isForeignTotal }">{{ item.uyruk }} ({{ item.count }})</span>
-                </li>
-              </ul>
+              <div>
+                <div class="fw-semibold small mb-2">Kadro Değerleri</div>
+                <div class="small value-summary">
+                  <div class="d-flex justify-content-between text-truncate">
+                    <span>İlk 11</span>
+                    <strong>{{ formatMoney(first11Total) }}</strong>
+                  </div>
+                  <div class="d-flex justify-content-between text-truncate">
+                    <span>Yedek</span>
+                    <strong>{{ formatMoney(benchTotal) }}</strong>
+                  </div>
+                  <div class="d-flex justify-content-between text-truncate">
+                    <span>Federasyon</span>
+                    <strong>{{ formatMoney(federationTotal) }}</strong>
+                  </div>
+                  <div class="d-flex justify-content-between text-truncate">
+                    <span>Dışarıda</span>
+                    <strong>{{ formatMoney(outTotal) }}</strong>
+                  </div>
+                </div>
+              </div>
 
-              <div class="small mb-2 fw-semibold">Kadro Dışı Uyruk Listesi</div>
-              <ul class="nationality-list mb-0">
-                <li v-for="item in outNationalityCounts" :key="'out-' + item.uyruk">
-                  <span :class="{ 'fw-semibold': item.isForeignTotal, 'text-danger fw-semibold': item.isTurkey || item.isForeignTotal }">{{ item.uyruk }} ({{ item.count }})</span>
-                </li>
-              </ul>
+              <hr class="my-2" />
+
+              <div>
+                <div class="fw-semibold small mb-2">İlk 11 Uyruklar</div>
+                <ul class="nationality-list mb-2 small">
+                  <li v-for="item in first11NationalityCounts" :key="'f11-' + item.uyruk">
+                    <span :class="{ 'fw-semibold': item.isForeignTotal, 'text-danger fw-semibold': item.isTurkey || item.isForeignTotal }">{{ item.uyruk }} ({{ item.count }})</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="fw-semibold small mb-2">Yedek Uyruklar</div>
+                <ul class="nationality-list mb-0 small">
+                  <li v-for="item in benchNationalityCounts" :key="'bench-' + item.uyruk">
+                    <span :class="{ 'fw-semibold': item.isForeignTotal, 'text-danger fw-semibold': item.isTurkey || item.isForeignTotal }">{{ item.uyruk }} ({{ item.count }})</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -185,6 +250,10 @@
                 <div class="mb-3">
                   <label for="playerValue" class="form-label">Değer</label>
                   <input type="number" min="0" step="0.01" class="form-control" id="playerValue" v-model.number="newPlayer.deger" required />
+                </div>
+                <div class="mb-3">
+                  <label for="playerBirthYear" class="form-label">Doğum Yılı</label>
+                  <input type="number" min="1900" :max="maxBirthYear" class="form-control" id="playerBirthYear" v-model.number="newPlayer.dogumYil" required />
                 </div>
                 <div class="form-check mb-2">
                   <input class="form-check-input" type="checkbox" id="playerInjured" v-model="newPlayer.sakat" />

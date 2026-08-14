@@ -5,8 +5,10 @@ new Vue({
       players: [],
       formations: {},
       selectedFormation: "4-2-3-1",
+      selectedFederation: "TFF",
       fieldAssignments: [],
-      benchAssignments: new Array(7).fill(null),
+      benchAssignments: new Array(10).fill(null),
+      federationAssignments: new Array(7).fill(null),
       nextPlayerId: 1,
       draggedContext: null,
       editingPlayerId: null,
@@ -18,6 +20,7 @@ new Vue({
         positions: "",
         uyruk: "",
         deger: 0,
+        dogumYil: new Date().getFullYear(),
         sakat: false,
         kadrodisi: false
       }
@@ -69,6 +72,95 @@ new Vue({
     },
     outTotal: function () {
       return this.sumPlayers(this.players);
+    },
+    benchSize: function () {
+      return this.selectedFederation === "TFF" ? 10 : 12;
+    },
+    federationSquadSize: function () {
+      if (this.selectedFederation === "TFF") {
+        return 7;
+      } else {
+        return 3;
+      }
+    },
+    maxUEFAPlayers: function () {
+      var allPlayers = this.fieldAssignments.filter(Boolean)
+        .concat(this.benchAssignments.filter(Boolean))
+        .concat(this.federationAssignments.filter(Boolean));
+      
+      var turkishCount = allPlayers.filter(function (p) {
+        return this.isTurkeyNationality(p.uyruk);
+      }, this).length;
+      
+      if (turkishCount >= 8) return 25;
+      if (turkishCount === 7) return 24;
+      if (turkishCount === 6) return 23;
+      if (turkishCount === 5) return 22;
+      if (turkishCount === 4) return 21;
+      return 20;
+    },
+    federationTotal: function () {
+      return this.sumPlayers(this.federationAssignments);
+    },
+    validationWarnings: function () {
+      var warnings = [];
+      var fieldPlayers = this.fieldAssignments.filter(Boolean);
+      var benchPlayers = this.benchAssignments.filter(Boolean);
+      var federationPlayers = this.federationAssignments.filter(Boolean);
+      var allPlayers = fieldPlayers.concat(benchPlayers).concat(federationPlayers);
+      
+      var allTurkish = allPlayers.filter(function (p) {
+        return this.isTurkeyNationality(p.uyruk);
+      }, this).length;
+      var allForeign = allPlayers.length - allTurkish;
+      
+      var first11Turkish = fieldPlayers.filter(function (p) {
+        return this.isTurkeyNationality(p.uyruk);
+      }, this).length;
+      var first11Foreign = fieldPlayers.length - first11Turkish;
+      
+      var benchTurkish = benchPlayers.filter(function (p) {
+        return this.isTurkeyNationality(p.uyruk);
+      }, this).length;
+      var benchForeign = benchPlayers.length - benchTurkish;
+      
+      if (this.selectedFederation === "TFF") {
+        if (allTurkish + allForeign > 28) {
+          warnings.push("Maximum 28 oyuncu olmalı (TFF)");
+        }
+        
+        var gkCount = fieldPlayers.filter(function (p) {
+          return p.positions.includes("Kaleci");
+        }).length;
+        if (gkCount > 3) {
+          warnings.push("Maximum 3 Kaleci olmalı");
+        }
+        
+        if (allTurkish < 14) {
+          warnings.push("Minimum 14 Türk oyuncu olmalı (TFF)");
+        }
+        
+        if (allForeign > 14) {
+          warnings.push("Maximum 14 Yabancı oyuncu olmalı (TFF)");
+        }
+        
+        if (allForeign > 10) {
+          var youngForeignCount = this.countYoungForeignPlayers(allPlayers);
+          if (youngForeignCount < 4) {
+            warnings.push("10'dan fazla Yabancı varsa 4+ genç (2004+) olmalı");
+          }
+        }
+      } else {
+        var maxPlayers = this.maxUEFAPlayers();
+        if (allPlayers.length > maxPlayers) {
+          warnings.push("UEFA: Toplam maksimum " + maxPlayers + " oyuncu ("+allTurkish+" Türk için)");
+        }
+      }
+      
+      return warnings;
+    },
+    maxBirthYear: function () {
+      return new Date().getFullYear();
     }
   },
   methods: {
@@ -79,6 +171,7 @@ new Vue({
         positions: "",
         uyruk: "",
         deger: 0,
+        dogumYil: new Date().getFullYear(),
         sakat: false,
         kadrodisi: false
       };
@@ -99,6 +192,7 @@ new Vue({
         positions: String(player.positions || ""),
         uyruk: String(player.uyruk || ""),
         deger: Number(player.deger || 0),
+        dogumYil: Number(player.dogumYil || new Date().getFullYear()),
         sakat: Boolean(player.sakat),
         kadrodisi: Boolean(player.kadrodisi)
       };
@@ -113,6 +207,7 @@ new Vue({
       var positions = this.newPlayer.positions.trim();
       var uyruk = this.newPlayer.uyruk.trim();
       var deger = Number(this.newPlayer.deger);
+      var dogumYil = Number(this.newPlayer.dogumYil);
       var sakat = Boolean(this.newPlayer.sakat);
       var kadrodisi = Boolean(this.newPlayer.kadrodisi);
 
@@ -131,6 +226,7 @@ new Vue({
             positions: positions,
             uyruk: uyruk,
             deger: deger,
+            dogumYil: dogumYil,
             sakat: sakat,
             kadrodisi: kadrodisi
           }));
@@ -157,6 +253,7 @@ new Vue({
         positions: player.positions,
         uyruk: player.uyruk,
         deger: Number(player.deger || 0),
+        dogumYil: Number(player.dogumYil || new Date().getFullYear()),
         sakat: Boolean(player.sakat),
         kadrodisi: Boolean(player.kadrodisi)
       };
@@ -256,6 +353,14 @@ new Vue({
       return String(value || "").toLocaleLowerCase("tr").includes("türkiye");
     },
 
+    getSimplifiedNationality: function (uyruk) {
+      if (!uyruk) return "Yabancı";
+      if (this.isTurkeyNationality(uyruk)) {
+        return "Türkiye";
+      }
+      return "Yabancı";
+    },
+
     getStorageKey: function () {
       return "kadroPlayersV1";
     },
@@ -266,6 +371,7 @@ new Vue({
 
       return raw.map(function (player, index) {
         var val = Number(player.deger);
+        var dogumYil = Number(player.dogumYil);
         return {
           _id: self.nextPlayerId + index,
           _order: index,
@@ -273,6 +379,7 @@ new Vue({
           positions: player.positions,
           uyruk: player.uyruk,
           deger: Number.isFinite(val) ? val : 0,
+          dogumYil: Number.isFinite(dogumYil) ? dogumYil : new Date().getFullYear(),
           sakat: Boolean(player.sakat),
           kadrodisi: Boolean(player.kadrodisi)
         };
@@ -294,6 +401,7 @@ new Vue({
       this.players.forEach(pushUnique);
       this.fieldAssignments.forEach(pushUnique);
       this.benchAssignments.forEach(pushUnique);
+      this.federationAssignments.forEach(pushUnique);
 
       return ordered.sort(function (a, b) {
         return a._order - b._order;
@@ -308,6 +416,7 @@ new Vue({
             positions: player.positions,
             uyruk: player.uyruk,
             deger: Number(player.deger || 0),
+            dogumYil: Number(player.dogumYil || new Date().getFullYear()),
             sakat: Boolean(player.sakat),
             kadrodisi: Boolean(player.kadrodisi)
           };
@@ -330,7 +439,8 @@ new Vue({
       this.fieldAssignments = this.currentFormationSlots.map(function () {
         return null;
       });
-      this.benchAssignments = new Array(7).fill(null);
+      this.benchAssignments = new Array(this.benchSize).fill(null);
+      this.federationAssignments = new Array(this.federationSquadSize).fill(null);
       this.draggedContext = null;
     },
 
@@ -347,41 +457,37 @@ new Vue({
     },
 
     groupNationalityCounts: function (list) {
-      var counts = {};
-      var foreignTotal = 0;
+      var turkCount = 0;
+      var foreignCount = 0;
       var self = this;
 
       list.forEach(function (player) {
-        var key = String(player.uyruk || "-").trim() || "-";
-        counts[key] = (counts[key] || 0) + 1;
-        if (!self.isTurkeyNationality(key)) {
-          foreignTotal += 1;
+        if (self.isTurkeyNationality(player.uyruk)) {
+          turkCount += 1;
+        } else {
+          foreignCount += 1;
         }
       });
 
-      var grouped = Object.keys(counts)
-        .map(function (uyruk) {
-          return {
-            uyruk: uyruk,
-            count: counts[uyruk],
-            isTurkey: self.isTurkeyNationality(uyruk),
-            isForeignTotal: false
-          };
-        })
-        .sort(function (a, b) {
-          var aIsTr = a.isTurkey;
-          var bIsTr = b.isTurkey;
-
-          if (aIsTr !== bIsTr) {
-            return aIsTr ? -1 : 1;
-          }
-
-          return String(a.uyruk || "").localeCompare(String(b.uyruk || ""), "tr");
+      var result = [];
+      if (turkCount > 0) {
+        result.push({
+          uyruk: "Türkiye",
+          count: turkCount,
+          isTurkey: true,
+          isForeignTotal: false
         });
+      }
+      if (foreignCount > 0) {
+        result.push({
+          uyruk: "Yabancı",
+          count: foreignCount,
+          isTurkey: false,
+          isForeignTotal: true
+        });
+      }
 
-      return [
-        { uyruk: "Yabancı", count: foreignTotal, isTurkey: false, isForeignTotal: true }
-      ].concat(grouped);
+      return result;
     },
 
     sumPlayers: function (list) {
@@ -750,6 +856,7 @@ new Vue({
       var positions = this.newPlayer.positions.trim();
       var uyruk = this.newPlayer.uyruk.trim();
       var deger = Number(this.newPlayer.deger);
+      var dogumYil = Number(this.newPlayer.dogumYil);
       var sakat = Boolean(this.newPlayer.sakat);
       var kadrodisi = Boolean(this.newPlayer.kadrodisi);
 
@@ -769,6 +876,7 @@ new Vue({
         positions: positions,
         uyruk: uyruk,
         deger: deger,
+        dogumYil: dogumYil,
         sakat: sakat,
         kadrodisi: kadrodisi
       });
@@ -780,6 +888,7 @@ new Vue({
         positions: "",
         uyruk: "",
         deger: 0,
+        dogumYil: new Date().getFullYear(),
         sakat: false,
         kadrodisi: false
       };
@@ -815,6 +924,84 @@ new Vue({
 
       this.players = this.normalizePlayerList(raw);
       this.nextPlayerId = this.players.length + 1;
+    },
+
+    isYoungPlayer: function (player) {
+      if (!player || !player.dogumYil) {
+        return false;
+      }
+      return Number(player.dogumYil) >= 2004;
+    },
+
+    countYoungForeignPlayers: function (players) {
+      var self = this;
+      return players.filter(function (p) {
+        return p && !self.isTurkeyNationality(p.uyruk) && self.isYoungPlayer(p);
+      }).length;
+    },
+
+    onFederationChange: function () {
+      this.benchAssignments = new Array(this.benchSize).fill(null);
+      this.federationAssignments = new Array(this.federationSquadSize).fill(null);
+    },
+
+    startDragFromFederation: function (index, event) {
+      var player = this.federationAssignments[index];
+      if (!player) {
+        event.preventDefault();
+        return;
+      }
+      this.draggedContext = {
+        source: "federation",
+        index: index,
+        player: player
+      };
+    },
+
+    dropToFederation: function (index, event) {
+      event.preventDefault();
+      if (!this.draggedContext) {
+        return;
+      }
+
+      var fromSquad = this.draggedContext.source === "squad";
+      var fromField = this.draggedContext.source === "field";
+      var fromBench = this.draggedContext.source === "bench";
+      var fromFederation = this.draggedContext.source === "federation";
+
+      var player = this.draggedContext.player;
+      if (!player) {
+        this.draggedContext = null;
+        return;
+      }
+
+      if (this.federationAssignments.indexOf(player) !== -1) {
+        this.draggedContext = null;
+        return;
+      }
+
+      if (fromFederation) {
+        this.$set(this.federationAssignments, this.draggedContext.index, null);
+        this.$set(this.federationAssignments, index, player);
+      } else {
+        var emptyIndex = this.federationAssignments.indexOf(null);
+        if (emptyIndex === -1) {
+          this.draggedContext = null;
+          return;
+        }
+        this.$set(this.federationAssignments, emptyIndex, player);
+      }
+
+      this.savePlayersToLocalStorage();
+      this.draggedContext = null;
+    },
+
+    removeFromFederation: function (index) {
+      var player = this.federationAssignments[index];
+      if (player) {
+        this.$set(this.federationAssignments, index, null);
+        this.savePlayersToLocalStorage();
+      }
     },
 
     loadFormations: async function () {

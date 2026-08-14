@@ -122,7 +122,7 @@ body {
 
 .bench-slot {
   position: relative;
-  min-height: 44px;
+  min-height: 30px;
   border-radius: 8px;
   border: 2px dashed #9aa5b1;
   background: #f8f9fa;
@@ -165,6 +165,7 @@ Ekran ayarı
 /* Desktop */
 .app-scale {
   transition: 0.2s;
+    zoom: 0.9;
 }
 
 /* Yatay tablet */
