@@ -298,9 +298,11 @@ new Vue({
     buildPlacementPayload: function () {
       return {
         formasyon: this.selectedFormation,
+        federasyon: this.selectedFederation,
         kadro: this.players.map(this.toExternalPlayer),
         saha: this.fieldAssignments.map(this.toExternalPlayer),
-        yedek: this.benchAssignments.map(this.toExternalPlayer)
+        yedek: this.benchAssignments.map(this.toExternalPlayer),
+        federasyon_kadrosu: this.federationAssignments.map(this.toExternalPlayer)
       };
     },
 
@@ -336,10 +338,16 @@ new Vue({
         this.selectedFormation = parsed.formasyon;
       }
 
+      if (typeof parsed.federasyon === "string" && (parsed.federasyon === "TFF" || parsed.federasyon === "UEFA")) {
+        this.selectedFederation = parsed.federasyon;
+        this.onFederationChange();
+      }
+
       var slotCount = this.currentFormationSlots.length;
       var rawKadro = Array.isArray(parsed.kadro) ? parsed.kadro : [];
       var rawSaha = Array.isArray(parsed.saha) ? parsed.saha : [];
       var rawYedek = Array.isArray(parsed.yedek) ? parsed.yedek : [];
+      var rawFederasyon = Array.isArray(parsed.federasyon_kadrosu) ? parsed.federasyon_kadrosu : [];
 
       this.nextPlayerId = 1;
       var order = 0;
@@ -355,9 +363,14 @@ new Vue({
         this.$set(this.fieldAssignments, i, this.createInternalPlayer(rawSaha[i], order++));
       }
 
-      this.benchAssignments = new Array(7).fill(null);
-      for (var j = 0; j < 7; j += 1) {
+      this.benchAssignments = new Array(this.benchSize).fill(null);
+      for (var j = 0; j < this.benchSize; j += 1) {
         this.$set(this.benchAssignments, j, this.createInternalPlayer(rawYedek[j], order++));
+      }
+
+      this.federationAssignments = new Array(this.federationSquadSize).fill(null);
+      for (var k = 0; k < this.federationSquadSize; k += 1) {
+        this.$set(this.federationAssignments, k, this.createInternalPlayer(rawFederasyon[k], order++));
       }
 
       this.savePlayersToLocalStorage();
