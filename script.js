@@ -125,38 +125,51 @@ new Vue({
       var benchForeign = benchPlayers.length - benchTurkish;
       
       if (this.selectedFederation === "TFF") {
-        if (allTurkish + allForeign > 28) {
-          warnings.push("Maximum 28 oyuncu olmalı (TFF)");
+        var totalPlayers = allTurkish + allForeign;
+        if (totalPlayers > 28) {
+          var excess = totalPlayers - 28;
+          warnings.push("🔴 Toplam oyuncu sayısı: " + totalPlayers + " / 28 — " + excess + " oyuncu çıkarın.");
         }
         
         var gkCount = fieldPlayers.filter(function (p) {
           return p.positions.includes("Kaleci");
         }).length;
         if (gkCount > 3) {
-          warnings.push("Maximum 3 Kaleci olmalı");
+          var gkExcess = gkCount - 3;
+          warnings.push("🔴 Kaleci: " + gkCount + " / 3 — " + gkExcess + " kaleci çıkarın.");
         }
         
         if (allTurkish < 14) {
-          warnings.push("Minimum 14 Türk oyuncu olmalı (TFF)");
+          var turkishNeeded = 14 - allTurkish;
+          warnings.push("🔴 Türk oyuncu: " + allTurkish + " / 14 — " + turkishNeeded + " Türk oyuncu daha ekleyin.");
         }
         
         if (allForeign > 14) {
-          warnings.push("Maximum 14 Yabancı oyuncu olmalı (TFF)");
+          var foreignExcess = allForeign - 14;
+          warnings.push("🔴 Yabancı oyuncu: " + allForeign + " / 14 — " + foreignExcess + " yabancı oyuncu çıkarın.");
         }
         
         if (allForeign > 10) {
           var youngForeignCount = this.countYoungForeignPlayers(allPlayers);
           if (youngForeignCount < 4) {
-            warnings.push("10'dan fazla Yabancı varsa 4+ genç (2004+) olmalı");
+            var youngNeeded = 4 - youngForeignCount;
+            var removeOldForeignCount = Math.min(youngNeeded, allForeign - 10);
+            var addYoungNeeded = 4 - youngForeignCount;
+            var msg = "🔴 Genç yabancı: " + youngForeignCount + " / 4 (10+ yabancı için) — " + addYoungNeeded + " genç yabancı (2004+) ekleyin.";
+            if (removeOldForeignCount > 0) {
+              msg += " Alternatif: " + removeOldForeignCount + " yaşlı yabancıyı çıkarıp " + addYoungNeeded + " genç yabancı ekleyebilirsiniz.";
+            }
+            warnings.push(msg);
           }
         }
       } else {
         var maxPlayers = this.maxUEFAPlayers;
         if (allPlayers.length > maxPlayers) {
           var needMore = 8 - allTurkish;
-          var msg = "Şu anda " + allTurkish + " Türk oyuncu var. UEFA kurallarına göre maksimum " + maxPlayers + " oyuncu yazabilirsiniz.";
+          var excess = allPlayers.length - maxPlayers;
+          var msg = "🔴 Toplam oyuncu: " + allPlayers.length + " / " + maxPlayers + " (" + allTurkish + " Türk için) — " + excess + " oyuncu çıkarın.";
           if (needMore > 0) {
-            msg += " 25 oyuncu yazabilmek için " + needMore + " Türk oyuncu daha seçmeniz gerekir.";
+            msg += " Alternatif: 25 oyuncu yazabilmek için " + needMore + " Türk oyuncu daha seçebilirsiniz.";
           }
           warnings.push(msg);
         }

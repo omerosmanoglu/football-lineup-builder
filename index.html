@@ -100,7 +100,7 @@
                     @dragover.prevent
                     @drop.prevent="dropToBench(index, $event)">
                     <template v-if="player">
-                      <span class="slot-player small">{{ player.name }}</span>
+                      <span class="slot-player small">{{ player.name }}<br><span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
                       <button type="button" class="slot-remove small" @click="removeFromBench(index)">x</button>
                     </template>
                     <template v-else>
@@ -129,7 +129,7 @@
                     @dragover.prevent
                     @drop.prevent="dropToFederation(index, $event)">
                     <template v-if="player">
-                      <span class="slot-player small">{{ player.name }}</span>
+                      <span class="slot-player small">{{ player.name }}<br><span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
                       <button type="button" class="slot-remove small" @click="removeFromFederation(index)">x</button>
                     </template>
                     <template v-else>
