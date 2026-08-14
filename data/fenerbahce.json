@@ -367,5 +367,68 @@
     "deger": 0.01,
     "sakat": false,
     "kadrodisi": false
+  },
+  {
+    "name": "Üveys Yasir Satık",
+    "dogumYil": 2009,
+    "positions": "Sol Bek",
+    "uyruk": "Türkiye",
+    "deger": 0.01,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Çağrı Fedai",
+    "dogumYil": 2006,
+    "positions": "Santrafor",
+    "uyruk": "Türkiye",
+    "deger": 0.01,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Adnan Efe Fettahoğlu",
+    "dogumYil": 2009,
+    "positions": "On Numara",
+    "uyruk": "Türkiye",
+    "deger": 0.01,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Alaettin Ekici",
+    "dogumYil": 2009,
+    "positions": "Sol Kanat",
+    "uyruk": "Türkiye",
+    "deger": 0.01,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Emin Eren Sayar",
+    "dogumYil": 2009,
+    "positions": "Santrafor",
+    "uyruk": "Türkiye",
+    "deger": 0.01,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Kamil Efe Üregen",
+    "dogumYil": 2008,
+    "positions": " Stoper",
+    "uyruk": "Türkiye",
+    "deger": 0.01,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Çağrı Hakan Balta",
+    "dogumYil": 2008,
+    "positions": "Santrafor",
+    "uyruk": "Türkiye",
+    "deger": 0.01,
+    "sakat": false,
+    "kadrodisi": false
   }
 ]
