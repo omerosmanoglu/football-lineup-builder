@@ -32,7 +32,7 @@
               
 
             </div>
-            <div class="card-body d-flex flex-column gap-2">
+            <div class="card-body d-flex flex-column gap-2 p-0">
 
 
               <div class="list-group squad-list">
@@ -66,6 +66,13 @@
                   <button type="button" class="btn btn-outline-primary" @click="openLoadPlacementModal"><i class='bi bi-folder2-open'></i></button>
                 </div>
               </div>
+
+              <input 
+                v-model="squadSearchFilter" 
+                type="text" 
+                class="form-control form-control-sm mt-3"
+                placeholder="Oyuncu ara... (ad, pozisyon, ülke)"
+                aria-label="Kadro oyuncu arama">
             </div>
           </div>
         </div>

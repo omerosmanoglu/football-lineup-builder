@@ -18,6 +18,7 @@ new Vue({
       savePlacementName: "",
       savePlacementJson: "",
       loadPlacementJson: "",
+      squadSearchFilter: "",
       newPlayer: {
         name: "",
         positions: "",
@@ -34,7 +35,21 @@ new Vue({
       return Object.keys(this.formations);
     },
     sortedSquadPlayers: function () {
-      return this.players.slice().sort(function (a, b) {
+      var self = this;
+      var filtered = this.players.slice();
+      
+      if (this.squadSearchFilter.trim()) {
+        var searchTerm = this.squadSearchFilter.toLowerCase().trim();
+        filtered = filtered.filter(function (p) {
+          return (
+            String(p.name || "").toLowerCase().includes(searchTerm) ||
+            String(p.positions || "").toLowerCase().includes(searchTerm) ||
+            String(p.uyruk || "").toLowerCase().includes(searchTerm)
+          );
+        });
+      }
+      
+      return filtered.sort(function (a, b) {
         return Number(b.deger || 0) - Number(a.deger || 0);
       });
     },

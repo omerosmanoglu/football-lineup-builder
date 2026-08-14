@@ -358,5 +358,14 @@
     "deger": 0.15,
     "sakat": false,
     "kadrodisi": false
+  },
+  {
+    "name": "Kuzey Sapaz",
+    "dogumYil": 2008,
+    "positions": "Kaleci",
+    "uyruk": "Türkiye",
+    "deger": 0.01,
+    "sakat": false,
+    "kadrodisi": false
   }
 ]
