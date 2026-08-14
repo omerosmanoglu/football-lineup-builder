@@ -668,6 +668,13 @@ new Vue({
         return { source: "bench", index: benchIndex, playerId: playerId };
       }
 
+      var federationIndex = this.federationAssignments.findIndex(function (p) {
+        return p && p._id === playerId;
+      });
+      if (federationIndex !== -1) {
+        return { source: "federation", index: federationIndex, playerId: playerId };
+      }
+
       var inSquad = this.players.some(function (p) {
         return p && p._id === playerId;
       });
@@ -707,6 +714,12 @@ new Vue({
         return { ctx: ctx, player: benchPlayer || null };
       }
 
+      if (ctx.source === "federation") {
+        var federationPlayer = this.federationAssignments[ctx.index];
+        this.$set(this.federationAssignments, ctx.index, null);
+        return { ctx: ctx, player: federationPlayer || null };
+      }
+
       return { ctx: null, player: null };
     },
 
@@ -722,6 +735,11 @@ new Vue({
 
       if (ctx.source === "bench") {
         this.$set(this.benchAssignments, ctx.index, player);
+        return;
+      }
+
+      if (ctx.source === "federation") {
+        this.$set(this.federationAssignments, ctx.index, player);
         return;
       }
 
@@ -951,11 +969,9 @@ new Vue({
         event.preventDefault();
         return;
       }
-      this.draggedContext = {
-        source: "federation",
-        index: index,
-        player: player
-      };
+      this.draggedContext = { source: "federation", index: index, playerId: Number(player._id) };
+      event.dataTransfer.effectAllowed = "move";
+      event.dataTransfer.setData("text/player-id", String(player._id));
     },
 
     dropToFederation: function (index, event) {
