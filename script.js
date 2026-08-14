@@ -153,7 +153,12 @@ new Vue({
       } else {
         var maxPlayers = this.maxUEFAPlayers;
         if (allPlayers.length > maxPlayers) {
-          warnings.push("UEFA: Toplam maksimum " + maxPlayers + " oyuncu ("+allTurkish+" Türk için)");
+          var needMore = 8 - allTurkish;
+          var msg = "Şu anda " + allTurkish + " Türk oyuncu var. UEFA kurallarına göre maksimum " + maxPlayers + " oyuncu yazabilirsiniz.";
+          if (needMore > 0) {
+            msg += " 25 oyuncu yazabilmek için " + needMore + " Türk oyuncu daha seçmeniz gerekir.";
+          }
+          warnings.push(msg);
         }
       }
       
