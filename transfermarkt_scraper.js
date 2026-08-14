@@ -1,6 +1,11 @@
 /*
-Bu adrese gir: https://www.transfermarkt.com.tr/fenerbahce-sk/kadernaechstesaison/verein/36/geruechte/0/anschluss/0/plus/1
-Aşağıdaki js'yi yaz ve indir
+Bu adreslere gir
+Fenerbahçe: https://www.transfermarkt.com.tr/fenerbahce-sk/kadernaechstesaison/verein/36/
+Beşiktaş: https://www.transfermarkt.com.tr/besiktas-istanbul/kadernaechstesaison/verein/114
+Galatasaray: https://www.transfermarkt.com.tr/galatasaray-istanbul/kadernaechstesaison/verein/141
+Trabzon: https://www.transfermarkt.com.tr/trabzonspor/kadernaechstesaison/verein/449
+
+Console'da aşağıdaki kodu çalıştır. Bu, kadro verilerini JSON formatında indirir.
 */
 (() => {
   const rows = document.querySelectorAll("table.items tbody tr");

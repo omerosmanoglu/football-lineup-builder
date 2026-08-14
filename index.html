@@ -15,6 +15,20 @@
           <div class="card h-100 shadow-sm">
             <div class="card-header fw-semibold">Kadro <span class="badge text-bg-secondary">{{ players.filter(Boolean).length }}</span></div>
             <div class="card-body d-flex flex-column gap-2">
+              <div class="d-flex gap-2 align-items-end">
+                <div class="flex-grow-1">
+                  <label for="dataSourceSelect" class="form-label small mb-2">Veri Kaynağı</label>
+                  <select id="dataSourceSelect" class="form-select form-select-sm" v-model="selectedDataSource" @change="onDataSourceChange">
+                    <option value="fenerbahce">Fenerbahçe</option>
+                    <option value="besiktas">Beşiktaş</option>
+                    <option value="trabzon">Trabzonspor</option>
+                    <option value="galatasaray">Galatasaray</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-sm btn-outline-secondary" title="Veri kaynağından yeniden yükle" @click="refreshPlayerData">
+                  <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+              </div>
               <div class="list-group squad-list">
                 <button
                   v-for="player in sortedSquadPlayers"

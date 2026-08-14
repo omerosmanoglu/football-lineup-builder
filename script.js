@@ -6,6 +6,7 @@ new Vue({
       formations: {},
       selectedFormation: "4-2-3-1",
       selectedFederation: "TFF",
+      selectedDataSource: "fenerbahce",
       fieldAssignments: [],
       benchAssignments: new Array(10).fill(null),
       federationAssignments: new Array(7).fill(null),
@@ -393,7 +394,11 @@ new Vue({
     },
 
     getStorageKey: function () {
-      return "kadroPlayersV1";
+      return "kadroPlayers_" + this.selectedDataSource;
+    },
+
+    getDataSourceStorageKey: function () {
+      return "selectedDataSource";
     },
 
     normalizePlayerList: function (raw) {
@@ -459,9 +464,10 @@ new Vue({
     },
 
     fetchDefaultPlayersFromJson: async function () {
-      var response = await fetch("oyuncu.json");
+      var filename = "data/" + this.selectedDataSource + ".json";
+      var response = await fetch(filename);
       if (!response.ok) {
-        throw new Error("oyuncu.json okunamadi");
+        throw new Error(filename + " okunamadi");
       }
       return await response.json();
     },
@@ -948,6 +954,15 @@ new Vue({
     },
 
     loadPlayers: async function () {
+      try {
+        var savedDataSource = localStorage.getItem(this.getDataSourceStorageKey());
+        if (savedDataSource && (savedDataSource === "fenerbahce" || savedDataSource === "besiktas" || savedDataSource === "trabzon" || savedDataSource === "galatasaray")) {
+          this.selectedDataSource = savedDataSource;
+        }
+      } catch (error) {
+        console.error("Data source localStorage okuma hatasi", error);
+      }
+
       var raw = null;
 
       try {
@@ -966,6 +981,7 @@ new Vue({
         raw = await this.fetchDefaultPlayersFromJson();
         try {
           localStorage.setItem(this.getStorageKey(), JSON.stringify(raw));
+          localStorage.setItem(this.getDataSourceStorageKey(), this.selectedDataSource);
         } catch (error) {
           console.error("localStorage ilk yazim hatasi", error);
         }
@@ -992,6 +1008,41 @@ new Vue({
     onFederationChange: function () {
       this.benchAssignments = new Array(this.benchSize).fill(null);
       this.federationAssignments = new Array(this.federationSquadSize).fill(null);
+    },
+
+    onDataSourceChange: function () {
+      try {
+        localStorage.setItem(this.getDataSourceStorageKey(), this.selectedDataSource);
+      } catch (error) {
+        console.error("Data source localStorage yazma hatasi", error);
+      }
+      this.loadPlayersFromDataSource();
+    },
+
+    refreshPlayerData: function () {
+      try {
+        localStorage.removeItem(this.getStorageKey());
+        localStorage.setItem(this.getDataSourceStorageKey(), this.selectedDataSource);
+      } catch (error) {
+        console.error("localStorage temizleme hatasi", error);
+      }
+      this.loadPlayersFromDataSource();
+    },
+
+    loadPlayersFromDataSource: async function () {
+      try {
+        var raw = await this.fetchDefaultPlayersFromJson();
+        this.players = this.normalizePlayerList(raw);
+        this.nextPlayerId = this.players.length + 1;
+        try {
+          localStorage.setItem(this.getStorageKey(), JSON.stringify(raw));
+        } catch (error) {
+          console.error("localStorage yazma hatasi", error);
+        }
+      } catch (error) {
+        alert("Veri kaynağı yüklenemedi: " + error.message);
+        console.error("Data source yükle hatasi", error);
+      }
     },
 
     startDragFromFederation: function (index, event) {
