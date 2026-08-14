@@ -1,3 +1,9 @@
+/*
+Fenerbahçe: https://www.transfermarkt.com.tr/fenerbahce-sk/kader/verein/36/saison_id/2026/plus/1
+Galatasaray: https://www.transfermarkt.com.tr/galatasaray-sk/kader/verein/141/saison_id/2026/plus/1
+Beşiktaş: https://www.transfermarkt.com.tr/besiktas-jk/kader/verein/114/saison_id/2026/plus/1
+Trabzon: https://www.transfermarkt.com.tr/trabzonspor/kader/verein/449/saison_id/2026/plus/1
+*/
 (() => {
 
     console.clear();
@@ -63,179 +69,184 @@
     );
 
 
-    // -----------------------------------------------------
-    // OYUNCULARI AL
-    // -----------------------------------------------------
+// -----------------------------------------------------
+// OYUNCULARI AL
+// -----------------------------------------------------
 
-    const data = [...rows]
-        .map((row) => {
+const data = [...rows]
+    .map((row, index) => {
 
-            const playerCell =
-                row.querySelector("td.posrela");
+        const playerCell =
+            row.querySelector("td.posrela");
 
-            if (!playerCell) {
-                return null;
+        if (!playerCell) {
+            console.warn(
+                "Oyuncu hücresi yok:",
+                index + 1
+            );
+            return null;
+        }
+
+
+        // -------------------------------------------------
+        // OYUNCU ADI
+        // -------------------------------------------------
+
+        const playerLink =
+            playerCell.querySelector(
+                'a[href*="/profil/spieler/"]'
+            );
+
+        const name =
+            playerLink
+                ?.textContent
+                .trim() || "";
+
+
+        // DEBUG
+        if (!name) {
+
+            console.warn(
+                "Oyuncu adı bulunamadı. Satır:",
+                index + 1
+            );
+
+            console.log(
+                row.innerText
+            );
+
+            return null;
+        }
+
+
+        // -------------------------------------------------
+        // POZİSYON
+        // -------------------------------------------------
+
+        const positionElement =
+            playerCell.querySelector(
+                "table.inline-table tr:nth-child(2) td"
+            );
+
+        const positions =
+            positionElement
+                ?.textContent
+                .trim() || "";
+
+
+        // -------------------------------------------------
+        // DOĞUM YILI
+        // -------------------------------------------------
+
+        const centeredCells =
+            row.querySelectorAll("td.zentriert");
+
+        let dogumYil = 0;
+
+        for (const cell of centeredCells) {
+
+            const text =
+                cell.textContent.trim();
+
+            const match =
+                text.match(/\b(19|20)\d{2}\b/);
+
+            if (match) {
+
+                dogumYil =
+                    Number(match[0]);
+
+                break;
             }
+        }
 
 
-            // -------------------------------------------------
-            // OYUNCU ADI
-            // -------------------------------------------------
+        // -------------------------------------------------
+        // UYRUK
+        // -------------------------------------------------
 
-            const name =
-                playerCell
-                    .querySelector("td.hauptlink a")
-                    ?.textContent
-                    .trim() || "";
+        const nationalityImgs =
+            row.querySelectorAll(
+                "img.flaggenrahmen"
+            );
 
-            if (!name) {
-                return null;
-            }
-
-
-            // -------------------------------------------------
-            // POZİSYON
-            // -------------------------------------------------
-
-            const positionElement =
-                playerCell.querySelector(
-                    "table.inline-table tr:nth-child(2) td"
-                );
-
-            const positions =
-                positionElement
-                    ?.textContent
-                    .trim() || "";
+        const uyruk =
+            [...nationalityImgs]
+                .map(img =>
+                    img.getAttribute("title")?.trim()
+                )
+                .filter(Boolean)
+                .join(" / ");
 
 
-            // -------------------------------------------------
-            // DOĞUM YILI
-            // -------------------------------------------------
+        // -------------------------------------------------
+        // PİYASA DEĞERİ
+        // -------------------------------------------------
 
-            const centeredCells =
-                row.querySelectorAll("td.zentriert");
+        const marketValueElement =
+            row.querySelector(
+                "td.rechts.hauptlink"
+            );
 
-            let dogumYil = 0;
+        const degerText =
+            marketValueElement
+                ?.innerText
+                .trim() || "";
 
-            /*
-                Örnek:
+        let deger = 0;
 
-                30 Eyl 1996 (29)
+        if (degerText.includes("mil.")) {
 
-                Buradan:
+            const value =
+                degerText
+                    .replace("mil. €", "")
+                    .replace(",", ".")
+                    .trim();
 
-                1996
+            deger =
+                parseFloat(value);
+        }
+        else if (degerText.includes("bin")) {
 
-                alınır.
-            */
+            const value =
+                degerText
+                    .replace("bin €", "")
+                    .replace(",", ".")
+                    .trim();
 
-            for (const cell of centeredCells) {
+            deger =
+                parseFloat(value) / 1000;
+        }
 
-                const text =
-                    cell.textContent.trim();
-
-                const match =
-                    text.match(/\b(19|20)\d{2}\b/);
-
-                if (match) {
-
-                    dogumYil =
-                        Number(match[0]);
-
-                    break;
-                }
-            }
-
-
-            // -------------------------------------------------
-            // UYRUK
-            // -------------------------------------------------
-
-            const nationalityImgs =
-                row.querySelectorAll(
-                    "img.flaggenrahmen"
-                );
-
-            const uyruk =
-                [...nationalityImgs]
-                    .map(img =>
-                        img.getAttribute("title")?.trim()
-                    )
-                    .filter(Boolean)
-                    .join(" / ");
+        if (isNaN(deger)) {
+            deger = 0;
+        }
 
 
-            // -------------------------------------------------
-            // PİYASA DEĞERİ
-            // -------------------------------------------------
+        // -------------------------------------------------
+        // OYUNCU
+        // -------------------------------------------------
 
-            const marketValueElement =
-                row.querySelector(
-                    "td.rechts.hauptlink"
-                );
+        return {
 
-            const degerText =
-                marketValueElement
-                    ?.innerText
-                    .trim() || "";
+            name: name,
 
-            let deger = 0;
+            dogumYil: dogumYil,
 
+            positions: positions,
 
-            if (degerText.includes("mil.")) {
+            uyruk: uyruk,
 
-                const value =
-                    degerText
-                        .replace("mil. €", "")
-                        .replace(",", ".")
-                        .trim();
+            deger: deger,
 
-                deger =
-                    parseFloat(value);
+            sakat: false,
 
-            }
-            else if (degerText.includes("bin")) {
+            kadrodisi: false
 
-                const value =
-                    degerText
-                        .replace("bin €", "")
-                        .replace(",", ".")
-                        .trim();
+        };
 
-                deger =
-                    parseFloat(value) / 1000;
-            }
-
-
-            if (isNaN(deger)) {
-                deger = 0;
-            }
-
-
-            // -------------------------------------------------
-            // OYUNCU
-            // -------------------------------------------------
-
-            return {
-
-                name: name,
-
-                dogumYil: dogumYil,
-
-                positions: positions,
-
-                uyruk: uyruk,
-
-                deger: deger,
-
-                sakat: false,
-
-                kadrodisi: false
-
-            };
-
-        })
-        .filter(Boolean);
+    })
+    .filter(Boolean);
 
 
     // -----------------------------------------------------

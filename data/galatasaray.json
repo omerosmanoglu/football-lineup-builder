@@ -9,11 +9,29 @@
     "kadrodisi": false
   },
   {
+    "name": "Jankat Yılmaz",
+    "dogumYil": 2004,
+    "positions": "Kaleci",
+    "uyruk": "Türkiye",
+    "deger": 1.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Günay Güvenç",
     "dogumYil": 1991,
     "positions": "Kaleci",
     "uyruk": "Türkiye / Almanya",
     "deger": 0.2,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Enes Emre Büyük",
+    "dogumYil": 2006,
+    "positions": "Kaleci",
+    "uyruk": "Türkiye",
+    "deger": 0,
     "sakat": false,
     "kadrodisi": false
   },
@@ -27,11 +45,20 @@
     "kadrodisi": false
   },
   {
-    "name": "Carlos Cuesta",
-    "dogumYil": 1999,
+    "name": "Abdülkerim Bardakcı",
+    "dogumYil": 1994,
     "positions": "Stoper",
-    "uyruk": "Kolombiya",
-    "deger": 8,
+    "uyruk": "Türkiye",
+    "deger": 6.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Victor Nelsson",
+    "dogumYil": 1998,
+    "positions": "Stoper",
+    "uyruk": "Danimarka",
+    "deger": 6,
     "sakat": false,
     "kadrodisi": false
   },
@@ -63,11 +90,11 @@
     "kadrodisi": false
   },
   {
-    "name": "Ali Yeşilyurt",
-    "dogumYil": 2005,
-    "positions": "Stoper",
-    "uyruk": "Türkiye",
-    "deger": 0,
+    "name": "Ismail Jakobs",
+    "dogumYil": 1999,
+    "positions": "Sol Bek",
+    "uyruk": "Senegal / Almanya",
+    "deger": 8,
     "sakat": false,
     "kadrodisi": false
   },
@@ -77,6 +104,15 @@
     "positions": "Sol Bek",
     "uyruk": "Türkiye",
     "deger": 5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Kazımcan Karataş",
+    "dogumYil": 2003,
+    "positions": "Sol Bek",
+    "uyruk": "Türkiye",
+    "deger": 2,
     "sakat": false,
     "kadrodisi": false
   },
@@ -99,20 +135,29 @@
     "kadrodisi": false
   },
   {
-    "name": "Przemyslaw Frankowski",
-    "dogumYil": 1995,
-    "positions": "Sağ Bek",
-    "uyruk": "Polonya",
-    "deger": 6,
-    "sakat": false,
-    "kadrodisi": false
-  },
-  {
     "name": "Elias Jelert",
     "dogumYil": 2003,
     "positions": "Sağ Bek",
     "uyruk": "Danimarka",
     "deger": 5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Ali Turap Bülbül",
+    "dogumYil": 2005,
+    "positions": "Sağ Bek",
+    "uyruk": "Türkiye",
+    "deger": 0.6,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Lesley Ugochukwu",
+    "dogumYil": 2004,
+    "positions": "Ön Libero",
+    "uyruk": "Fransa / Nijerya",
+    "deger": 22,
     "sakat": false,
     "kadrodisi": false
   },
@@ -135,6 +180,15 @@
     "kadrodisi": false
   },
   {
+    "name": "Eyüp Aydın",
+    "dogumYil": 2004,
+    "positions": "Ön Libero",
+    "uyruk": "Türkiye / Almanya",
+    "deger": 0.8,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Gabriel Sara",
     "dogumYil": 1999,
     "positions": "Merkez Orta Saha",
@@ -153,11 +207,11 @@
     "kadrodisi": false
   },
   {
-    "name": "Berat Yılmaz",
-    "dogumYil": 2006,
+    "name": "İlkay Gündoğan",
+    "dogumYil": 1990,
     "positions": "Merkez Orta Saha",
-    "uyruk": "Türkiye",
-    "deger": 0.15,
+    "uyruk": "Almanya",
+    "deger": 2,
     "sakat": false,
     "kadrodisi": false
   },
@@ -180,11 +234,11 @@
     "kadrodisi": false
   },
   {
-    "name": "Ahmed Kutucu",
-    "dogumYil": 2000,
+    "name": "Berat Luş",
+    "dogumYil": 2007,
     "positions": "Sol Kanat",
-    "uyruk": "Türkiye / Almanya",
-    "deger": 3,
+    "uyruk": "Türkiye",
+    "deger": 1,
     "sakat": false,
     "kadrodisi": false
   },
@@ -221,24 +275,6 @@
     "positions": "Santrafor",
     "uyruk": "Nijerya",
     "deger": 75,
-    "sakat": false,
-    "kadrodisi": false
-  },
-  {
-    "name": "Halil Dervişoğlu",
-    "dogumYil": 1999,
-    "positions": "Santrafor",
-    "uyruk": "Türkiye / Hollanda",
-    "deger": 0.7,
-    "sakat": false,
-    "kadrodisi": false
-  },
-  {
-    "name": "Yalın Dilek",
-    "dogumYil": 2006,
-    "positions": "Santrafor",
-    "uyruk": "Türkiye",
-    "deger": 0.15,
     "sakat": false,
     "kadrodisi": false
   }

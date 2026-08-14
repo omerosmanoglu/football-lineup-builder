@@ -1,5 +1,14 @@
 [
   {
+    "name": "André Onana",
+    "dogumYil": 1996,
+    "positions": "Kaleci",
+    "uyruk": "Kamerun",
+    "deger": 10,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Onuralp Çevikkan",
     "dogumYil": 2006,
     "positions": "Kaleci",
@@ -63,11 +72,11 @@
     "kadrodisi": false
   },
   {
-    "name": "Arda Öztürk",
-    "dogumYil": 2007,
+    "name": "Stefan Savic",
+    "dogumYil": 1991,
     "positions": "Stoper",
-    "uyruk": "Türkiye",
-    "deger": 0.1,
+    "uyruk": "Karadağ / Sırbistan",
+    "deger": 0.4,
     "sakat": false,
     "kadrodisi": false
   },
@@ -81,6 +90,15 @@
     "kadrodisi": false
   },
   {
+    "name": "Mustafa Eskihellaç",
+    "dogumYil": 1997,
+    "positions": "Sol Bek",
+    "uyruk": "Türkiye",
+    "deger": 4,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Wagner Pina",
     "dogumYil": 2002,
     "positions": "Sağ Bek",
@@ -90,11 +108,29 @@
     "kadrodisi": false
   },
   {
-    "name": "Oğuzhan Yılmaz",
-    "dogumYil": 2006,
-    "positions": "Sağ Bek",
+    "name": "Batista Mendy",
+    "dogumYil": 2000,
+    "positions": "Ön Libero",
+    "uyruk": "Fransa / Gine-Bissau",
+    "deger": 7.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "John Lundstram",
+    "dogumYil": 1994,
+    "positions": "Ön Libero",
+    "uyruk": "İngiltere",
+    "deger": 1.3,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Okay Yokuşlu",
+    "dogumYil": 1994,
+    "positions": "Ön Libero",
     "uyruk": "Türkiye",
-    "deger": 0.375,
+    "deger": 1.2,
     "sakat": false,
     "kadrodisi": false
   },
@@ -135,20 +171,20 @@
     "kadrodisi": false
   },
   {
+    "name": "Ozan Tufan",
+    "dogumYil": 1995,
+    "positions": "Merkez Orta Saha",
+    "uyruk": "Türkiye",
+    "deger": 1.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Ernest Muci",
     "dogumYil": 2001,
     "positions": "On Numara",
     "uyruk": "Arnavutluk",
     "deger": 11,
-    "sakat": false,
-    "kadrodisi": false
-  },
-  {
-    "name": "Muhammed Cham",
-    "dogumYil": 2000,
-    "positions": "On Numara",
-    "uyruk": "Avusturya",
-    "deger": 3.5,
     "sakat": false,
     "kadrodisi": false
   },
@@ -180,20 +216,11 @@
     "kadrodisi": false
   },
   {
-    "name": "Kazeem Olaigbe",
-    "dogumYil": 2003,
+    "name": "Metehan Mimaroğlu",
+    "dogumYil": 1994,
     "positions": "Sol Kanat",
-    "uyruk": "Belçika / Nijerya",
-    "deger": 4,
-    "sakat": false,
-    "kadrodisi": false
-  },
-  {
-    "name": "Thierry Karadeniz",
-    "dogumYil": 2008,
-    "positions": "Sol Kanat",
-    "uyruk": "Türkiye / Almanya",
-    "deger": 0,
+    "uyruk": "Türkiye",
+    "deger": 0.4,
     "sakat": false,
     "kadrodisi": false
   },
@@ -203,6 +230,15 @@
     "positions": "Sağ Kanat",
     "uyruk": "Mısır",
     "deger": 22,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Cihan Çanak",
+    "dogumYil": 2005,
+    "positions": "Sağ Kanat",
+    "uyruk": "Türkiye / Belçika",
+    "deger": 2,
     "sakat": false,
     "kadrodisi": false
   },
@@ -225,20 +261,20 @@
     "kadrodisi": false
   },
   {
-    "name": "Poyraz Yıldırım",
-    "dogumYil": 2005,
-    "positions": "Santrafor",
-    "uyruk": "Türkiye",
-    "deger": 1.2,
-    "sakat": false,
-    "kadrodisi": false
-  },
-  {
     "name": "René Mitongo",
     "dogumYil": 2008,
     "positions": "Santrafor",
     "uyruk": "Belçika",
     "deger": 1,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Umut Nayir",
+    "dogumYil": 1993,
+    "positions": "Santrafor",
+    "uyruk": "Türkiye",
+    "deger": 0.6,
     "sakat": false,
     "kadrodisi": false
   }

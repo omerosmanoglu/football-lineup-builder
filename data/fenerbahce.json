@@ -81,6 +81,15 @@
     "kadrodisi": false
   },
   {
+    "name": "Çağlar Söyüncü",
+    "dogumYil": 1996,
+    "positions": "Stoper",
+    "uyruk": "Türkiye",
+    "deger": 3.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Rodrigo Becão",
     "dogumYil": 1996,
     "positions": "Stoper",
@@ -90,11 +99,11 @@
     "kadrodisi": false
   },
   {
-    "name": "Yiğit Fidan",
-    "dogumYil": 2005,
+    "name": "Omar Fayed",
+    "dogumYil": 2003,
     "positions": "Stoper",
-    "uyruk": "Türkiye",
-    "deger": 1,
+    "uyruk": "Mısır",
+    "deger": 0.6,
     "sakat": false,
     "kadrodisi": false
   },
@@ -117,20 +126,29 @@
     "kadrodisi": false
   },
   {
+    "name": "Mert Müldür",
+    "dogumYil": 1999,
+    "positions": "Sağ Bek",
+    "uyruk": "Türkiye / Avusturya",
+    "deger": 7,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Nélson Semedo",
+    "dogumYil": 1993,
+    "positions": "Sağ Bek",
+    "uyruk": "Portekiz / Yeşil Burun Adaları",
+    "deger": 6,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Ognjen Mimović",
     "dogumYil": 2004,
     "positions": "Sağ Bek",
     "uyruk": "Sırbistan",
     "deger": 2.7,
-    "sakat": false,
-    "kadrodisi": false
-  },
-  {
-    "name": "Mustafa Akyıldız",
-    "dogumYil": 2006,
-    "positions": "Sağ Bek",
-    "uyruk": "Türkiye",
-    "deger": 0,
     "sakat": false,
     "kadrodisi": false
   },
@@ -207,6 +225,24 @@
     "kadrodisi": false
   },
   {
+    "name": "Emre Demir",
+    "dogumYil": 2004,
+    "positions": "On Numara",
+    "uyruk": "Türkiye",
+    "deger": 0.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Mert Hakan Yandaş",
+    "dogumYil": 1994,
+    "positions": "On Numara",
+    "uyruk": "Türkiye",
+    "deger": 0,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Kerem Aktürkoğlu",
     "dogumYil": 1998,
     "positions": "Sol Kanat",
@@ -257,6 +293,15 @@
     "positions": "Sağ Kanat",
     "uyruk": "Mali",
     "deger": 20,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Cengiz Ünder",
+    "dogumYil": 1997,
+    "positions": "Sağ Kanat",
+    "uyruk": "Türkiye",
+    "deger": 4,
     "sakat": false,
     "kadrodisi": false
   },

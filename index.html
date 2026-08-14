@@ -47,7 +47,7 @@
                   @dragend="clearDraggedContext">
                   <div class="d-flex justify-content-between align-items-start gap-2">
                     <div class="flex-grow-1 text-start">
-                      <div class="fw-semibold">{{ player.name }}</div>
+                      <div class="fw-semibold">{{ player.name }}{{ isYoungPlayer(player) ? ' (+4)' : '' }}</div>
                       <div class="small text-muted">{{ player.positions }}</div>
                       <div class="small text-muted">{{ player.uyruk }} - {{ formatMoney(player.deger) }}</div>
                     </div>
@@ -86,7 +86,7 @@
                   @dragover.prevent
                   @drop.prevent="dropToField(index, $event)">
                   <template v-if="fieldAssignments[index]">
-                    <span class="slot-player" draggable="true" @dragstart.stop="startDragFromField(index, $event)">{{ fieldAssignments[index].name }}</span>
+                    <span class="slot-player" draggable="true" @dragstart.stop="startDragFromField(index, $event)">{{ fieldAssignments[index].name }}{{ isYoungPlayer(fieldAssignments[index]) ? ' (+4)' : '' }}</span>
                     <span class="small">{{ fieldAssignments[index].positions }}</span>
                     <button type="button" class="slot-remove" @click="removeFromField(index)">x</button>
                   </template>
@@ -120,7 +120,7 @@
                     @dragover.prevent
                     @drop.prevent="dropToBench(index, $event)">
                     <template v-if="player">
-                      <span class="slot-player small">{{ player.name }}<br><span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
+                      <span class="slot-player small">{{ player.name }}{{ isYoungPlayer(player) ? ' (+4)' : '' }} <span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
                       <button type="button" class="slot-remove small" @click="removeFromBench(index)">x</button>
                     </template>
                     <template v-else>
@@ -149,7 +149,7 @@
                     @dragover.prevent
                     @drop.prevent="dropToFederation(index, $event)">
                     <template v-if="player">
-                      <span class="slot-player small">{{ player.name }}<br><span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
+                      <span class="slot-player small">{{ player.name }}{{ isYoungPlayer(player) ? ' (+4)' : '' }} <span style="opacity: 0.6; font-size: 0.75em;">({{ player.positions }})</span></span>
                       <button type="button" class="slot-remove small" @click="removeFromFederation(index)">x</button>
                     </template>
                     <template v-else>
@@ -201,19 +201,19 @@
                 <div class="small value-summary">
                   <div class="d-flex justify-content-between text-truncate">
                     <span>İlk 11</span>
-                    <strong>Türkiye ({{ first11NationalityStats.turkishCount }}) Yabancı ({{ first11NationalityStats.foreignCount }}) {{ first11NationalityStats.total }} oyuncu</strong>
+                    <span>({{ first11NationalityStats.turkishCount }}) Türk, ({{ first11NationalityStats.foreignCount }}) Yab. : {{ first11NationalityStats.total }} oyuncu</span>
                   </div>
                   <div class="d-flex justify-content-between text-truncate">
                     <span>Yedek</span>
-                    <strong>Türkiye ({{ benchNationalityStats.turkishCount }}) Yabancı ({{ benchNationalityStats.foreignCount }}) {{ benchNationalityStats.total }} oyuncu</strong>
+                    <span>({{ benchNationalityStats.turkishCount }}) Türk, ({{ benchNationalityStats.foreignCount }}) Yab. : {{ benchNationalityStats.total }} oyuncu</span>
                   </div>
                   <div class="d-flex justify-content-between text-truncate">
                     <span>Federasyon</span>
-                    <strong>Türkiye ({{ federationNationalityStats.turkishCount }}) Yabancı ({{ federationNationalityStats.foreignCount }}) {{ federationNationalityStats.total }} oyuncu</strong>
+                    <span> ({{ federationNationalityStats.turkishCount }}) Türk, ({{ federationNationalityStats.foreignCount }}) Yab. : {{ federationNationalityStats.total }} oyuncu</span>
                   </div>
                   <div class="d-flex justify-content-between text-truncate">
                     <span>Dışarıda</span>
-                    <strong>Türkiye ({{ outNationalityStats.turkishCount }}) Yabancı ({{ outNationalityStats.foreignCount }}) {{ outNationalityStats.total }} oyuncu</strong>
+                    <span>({{ outNationalityStats.turkishCount }}) Türk, ({{ outNationalityStats.foreignCount }}) Yab. : {{ outNationalityStats.total }} oyuncu</span>
                   </div>
                 </div>
               </div>

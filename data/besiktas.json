@@ -18,6 +18,15 @@
     "kadrodisi": false
   },
   {
+    "name": "Emre Bilgin",
+    "dogumYil": 2004,
+    "positions": "Kaleci",
+    "uyruk": "Türkiye",
+    "deger": 0.4,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Emir Yaşar",
     "dogumYil": 2006,
     "positions": "Kaleci",
@@ -50,6 +59,33 @@
     "positions": "Stoper",
     "uyruk": "Türkiye",
     "deger": 7,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Yasin Özcan",
+    "dogumYil": 2006,
+    "positions": "Stoper",
+    "uyruk": "Türkiye",
+    "deger": 5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Felix Uduokhai",
+    "dogumYil": 1997,
+    "positions": "Stoper",
+    "uyruk": "Almanya / Nijerya",
+    "deger": 3.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Emrecan Uzunhan",
+    "dogumYil": 2001,
+    "positions": "Stoper",
+    "uyruk": "Türkiye",
+    "deger": 0.5,
     "sakat": false,
     "kadrodisi": false
   },
@@ -117,6 +153,24 @@
     "kadrodisi": false
   },
   {
+    "name": "Moatasem Al-Musrati",
+    "dogumYil": 1996,
+    "positions": "Ön Libero",
+    "uyruk": "Libya / Portekiz",
+    "deger": 4.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Amir Hadziahmetovic",
+    "dogumYil": 1997,
+    "positions": "Ön Libero",
+    "uyruk": "Bosna-Hersek / Danimarka",
+    "deger": 4,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Salih Özcan",
     "dogumYil": 1998,
     "positions": "Ön Libero",
@@ -131,6 +185,15 @@
     "positions": "Ön Libero",
     "uyruk": "Türkiye",
     "deger": 2.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Jean Onana",
+    "dogumYil": 2000,
+    "positions": "Ön Libero",
+    "uyruk": "Kamerun",
+    "deger": 1,
     "sakat": false,
     "kadrodisi": false
   },
@@ -171,6 +234,15 @@
     "kadrodisi": false
   },
   {
+    "name": "João Mário",
+    "dogumYil": 1993,
+    "positions": "On Numara",
+    "uyruk": "Portekiz / Angola",
+    "deger": 1.5,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
     "name": "Leandro Trossard",
     "dogumYil": 1994,
     "positions": "Sol Kanat",
@@ -189,11 +261,11 @@
     "kadrodisi": false
   },
   {
-    "name": "Devrim Şahin",
-    "dogumYil": 2007,
+    "name": "Arda Kılıç",
+    "dogumYil": 2005,
     "positions": "Sol Kanat",
     "uyruk": "Türkiye",
-    "deger": 0.4,
+    "deger": 0.05,
     "sakat": false,
     "kadrodisi": false
   },
@@ -212,6 +284,15 @@
     "positions": "Sağ Kanat",
     "uyruk": "Çek Cumhuriyeti",
     "deger": 7,
+    "sakat": false,
+    "kadrodisi": false
+  },
+  {
+    "name": "Milot Rashica",
+    "dogumYil": 1996,
+    "positions": "Sağ Kanat",
+    "uyruk": "Kosova / Arnavutluk",
+    "deger": 3.5,
     "sakat": false,
     "kadrodisi": false
   },
