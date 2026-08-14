@@ -1084,6 +1084,23 @@ new Vue({
       return !this.isTurkeyNationality(player.uyruk) && Number(player.dogumYil) >= YOUNG_PLAYER_BIRTH_YEAR;
     },
 
+    getPlayerNameWithEmoji: function (player) {
+      if (!player || !player.name) {
+        return "";
+      }
+      
+      var emoji = "";
+      if (this.isTurkeyNationality(player.uyruk)) {
+        emoji = "🟢 ";  // Türkiye
+      } else if (this.isForeignYoungPlayer(player)) {
+        emoji = "🟡 ";  // Yabancı young player
+      } else {
+        emoji = "🟠 ";  // Diğer yabancı
+      }
+      
+      return emoji + player.name;
+    },
+
     countYoungForeignPlayers: function (players) {
       var self = this;
       return players.filter(function (p) {
