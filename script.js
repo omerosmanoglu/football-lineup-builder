@@ -151,7 +151,7 @@ new Vue({
           }
         }
       } else {
-        var maxPlayers = this.maxUEFAPlayers();
+        var maxPlayers = this.maxUEFAPlayers;
         if (allPlayers.length > maxPlayers) {
           warnings.push("UEFA: Toplam maksimum " + maxPlayers + " oyuncu ("+allTurkish+" Türk için)");
         }
